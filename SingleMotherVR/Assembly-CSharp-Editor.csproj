@@ -60,6 +60,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AVProVideo\Scripts\Components\Support\PlayMaker\Editor\AVProVideoActionHeaderPropertyDrawer.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\ApplyToMaterialEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\ApplyToMeshEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\AudioOutputEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\DisplayUGUIEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\MediaPlayerEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\PlaylistMediaPlayerEditor.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\PostProcessBuild.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\SupportWindow.cs" />
+    <Compile Include="Assets\AVProVideo\Scripts\Editor\UpdateStereoMaterialEditor.cs" />
     <Compile Include="Assets\CurvedUI\Scripts\Editor\ConditionalCompilationUtility.cs" />
     <Compile Include="Assets\CurvedUI\Scripts\Editor\CurvedUIHandSwitcherEditor.cs" />
     <Compile Include="Assets\CurvedUI\Scripts\Editor\CurvedUIInputModuleEditor.cs" />
