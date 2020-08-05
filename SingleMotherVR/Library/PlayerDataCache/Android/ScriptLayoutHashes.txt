@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/MyUnityProjects/vrsinglemother/SingleMotherVR/SingleMotherVRApp.apk
+C:/Users/Editor 1/Downloads/SingleMotherVRApp.apk
 SceneListBegin?
 Assets/Scenes/MenuScene.unity
 SceneListEnd?
@@ -417,5 +417,5 @@ a8870609d5ff474352f315eba63aaa8b Assembly-CSharp.dll:RenderHeads.Media.AVProVide
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DebugUISample
 11ea9d7ede92b8989cb33b8aaf9c1753 Assembly-CSharp.dll:CurvedUI.CUI_ChangeValueOnHold
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:CurvedUI.CurvedUITMPSubmesh
-18235af34262c9d1c806370a73196694 Assembly-CSharp.dll:OculusSampleFramework.ButtonController
 c6fb6788fa787ca9704f18074a5e4764 Assembly-CSharp.dll:.StarterPackController
+18235af34262c9d1c806370a73196694 Assembly-CSharp.dll:OculusSampleFramework.ButtonController
