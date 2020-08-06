@@ -9,13 +9,11 @@ public class StarterPackController : MonoBehaviour
     public GameObject Title;
     public GameObject IntroPanel;
     public GameObject HandsPanel;
-    public GameObject ExperimentPanel;
     public GameObject Sphere;
     public GameObject Canvas;
-    public GameObject EnvironmentExmaple;
+    public GameObject MenuPack;
 
     public Button ContinueBtn;
-    public Button ExitBtn;
 
     public Button LeftHandBtn;
     public Button RightHandBtn;
@@ -29,7 +27,6 @@ public class StarterPackController : MonoBehaviour
         ContinueBtn.onClick.AddListener(ShowHandsPanel);
         LeftHandBtn.onClick.AddListener(SetHandToLeft);
         RightHandBtn.onClick.AddListener(SetHandToRight);
-        ExitBtn.onClick.AddListener(HidePanels);
     }
 
     private void Start()
@@ -47,8 +44,7 @@ public class StarterPackController : MonoBehaviour
         Canvas.SetActive(true);
         IntroPanel.SetActive(false);
         HandsPanel.SetActive(false);
-        ExperimentPanel.SetActive(false);
-        EnvironmentExmaple.SetActive(false);
+        MenuPack.SetActive(false);
 
         yield return new WaitForSeconds(2.7f);
         Title.SetActive(false);
@@ -57,7 +53,6 @@ public class StarterPackController : MonoBehaviour
 
     void ShowHandsPanel() {
         IntroPanel.SetActive(false);
-        ExperimentPanel.SetActive(false);
         HandsPanel.SetActive(true);
     }
 
@@ -65,25 +60,22 @@ public class StarterPackController : MonoBehaviour
         Title.SetActive(false);
         IntroPanel.SetActive(false);
         HandsPanel.SetActive(false);
-        ExperimentPanel.SetActive(false);
         Sphere.SetActive(false);
         Canvas.SetActive(false);
-        EnvironmentExmaple.SetActive(true);
+        MenuPack.SetActive(true);
     }
 
     void SetHandToLeft() {
         PlayerPrefs.SetString("Hand", "left");
         EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
-        HandsPanel.SetActive(false);
-        ExperimentPanel.SetActive(true);
+        HidePanels();
     }
 
     void SetHandToRight() {
         PlayerPrefs.SetString("Hand", "right");
         EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
-        HandsPanel.SetActive(false);
-        ExperimentPanel.SetActive(true);
+        HidePanels();
     }
 }
