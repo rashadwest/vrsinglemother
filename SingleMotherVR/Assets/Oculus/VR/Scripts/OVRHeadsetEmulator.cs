@@ -50,9 +50,10 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 	private bool hasSentEvent = false;
 	private bool emulatorHasInitialized = false;
 
+
 	// Use this for initialization
 	void Start () {
-	}
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -170,4 +171,5 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 
 		return false;
 	}
+
 }

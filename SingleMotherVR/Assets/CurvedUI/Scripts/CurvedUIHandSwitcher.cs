@@ -132,7 +132,7 @@ namespace CurvedUI {
 
 
         #region HELPER FUNCTIONS
-        void SwitchHandTo(CurvedUIInputModule.Hand newHand)
+        public void SwitchHandTo(CurvedUIInputModule.Hand newHand)
         {
             CurvedUIInputModule.Instance.UsedHand = newHand;
 
