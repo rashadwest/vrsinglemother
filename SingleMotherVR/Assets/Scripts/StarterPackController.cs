@@ -11,7 +11,8 @@ public class StarterPackController : MonoBehaviour
     public GameObject HandsPanel;
     public GameObject Sphere;
     public GameObject Canvas;
-    public GameObject MenuPack;
+
+    public MenuController MenuPack;
 
     public Button ContinueBtn;
 
@@ -44,7 +45,6 @@ public class StarterPackController : MonoBehaviour
         Canvas.SetActive(true);
         IntroPanel.SetActive(false);
         HandsPanel.SetActive(false);
-        MenuPack.SetActive(false);
 
         yield return new WaitForSeconds(2.7f);
         Title.SetActive(false);
@@ -56,26 +56,28 @@ public class StarterPackController : MonoBehaviour
         HandsPanel.SetActive(true);
     }
 
-    private void HidePanels() {
+    private IEnumerator HidePanels() {
+        Canvas.GetComponent<Animator>().Play("CanvasGroupFadeOut");
+        yield return new WaitForSeconds(0.6f);
         Title.SetActive(false);
         IntroPanel.SetActive(false);
         HandsPanel.SetActive(false);
         Sphere.SetActive(false);
         Canvas.SetActive(false);
-        MenuPack.SetActive(true);
+        MenuPack.Open();
     }
 
     void SetHandToLeft() {
         PlayerPrefs.SetString("Hand", "left");
         EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
-        HidePanels();
+        StartCoroutine(HidePanels());
     }
 
     void SetHandToRight() {
         PlayerPrefs.SetString("Hand", "right");
         EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
-        HidePanels();
+        StartCoroutine(HidePanels());
     }
 }

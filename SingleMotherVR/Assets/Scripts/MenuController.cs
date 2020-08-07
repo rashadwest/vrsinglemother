@@ -11,8 +11,11 @@ public class MenuController : MonoBehaviour
     public Button CreditsBtn;
     public Button ExitBtn;
 
+    public GameObject MenuContainer;
     public GameObject MainMenuPanel;
     public GameObject SettingsPanel;
+    public GameObject DarkBGCanvas;
+    public GameObject Canvas;
 
     [Header("Settings")]
     public Button CloseSettingsBtn;
@@ -23,6 +26,9 @@ public class MenuController : MonoBehaviour
 
     public CurvedUIHandSwitcher HandSwitcher;
 
+    [Header("Credits")]
+    public CreditsController CreditsController;
+
     private void Start()
     {
         MainMenuPanel.SetActive(true);
@@ -32,10 +38,24 @@ public class MenuController : MonoBehaviour
     private void Awake()
     {
         SettingsBtn.onClick.AddListener(OpenSettingsPanel);
+        CreditsBtn.onClick.AddListener(() => { StartCoroutine(OpenCreditsPanel()); });
         CloseSettingsBtn.onClick.AddListener(CloseSettingsPanel);
         ExitBtn.onClick.AddListener(Exit);
         LeftHandBtn.onClick.AddListener(SetHandToLeft);
         RightHandBtn.onClick.AddListener(SetHandToRight);
+    }
+
+    public void Open()
+    {
+        DarkBGCanvas.SetActive(true);
+        StartCoroutine(Opening());
+    }
+
+    IEnumerator Opening()
+    {
+        yield return new WaitForSeconds(0.4f);
+        Canvas.SetActive(true);
+        DarkBGCanvas.SetActive(false);
     }
 
     void OpenSettingsPanel() {
@@ -79,6 +99,13 @@ public class MenuController : MonoBehaviour
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
         LeftHandBtn.interactable = true;
         RightHandBtn.interactable = false;
+    }
+
+    IEnumerator OpenCreditsPanel()
+    {
+        CreditsController.Open();
+        yield return new WaitForSeconds(0.4f);
+        MenuContainer.SetActive(false);
     }
 
     void Exit() {
