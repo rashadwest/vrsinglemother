@@ -51,6 +51,10 @@ public class MenuController : MonoBehaviour
         StartCoroutine(Opening());
     }
 
+    public void SimpleOpen() {
+        Canvas.SetActive(true);
+    }
+
     IEnumerator Opening()
     {
         yield return new WaitForSeconds(0.4f);
