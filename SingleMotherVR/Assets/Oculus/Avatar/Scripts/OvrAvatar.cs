@@ -362,6 +362,9 @@ public class OvrAvatar : MonoBehaviour
         };
     }
 
+    public Material CurrentMaterial;
+    public Texture CurrentTexture;
+
     private void BuildRenderComponents()
     {
         ovrAvatarBaseComponent baseComponnet = new ovrAvatarBaseComponent();
@@ -379,6 +382,7 @@ public class OvrAvatar : MonoBehaviour
         {
             CAPI.ovrAvatarComponent_Get(leftHandComponnet.renderComponent, FetchName, ref dummyComponent);
             AddAvatarComponent(ref HandLeft, dummyComponent);
+            HandLeft.SetHandTexture(CurrentTexture);
             HandLeft.isLeftHand = true;
         }
 
@@ -386,6 +390,7 @@ public class OvrAvatar : MonoBehaviour
         {
             CAPI.ovrAvatarComponent_Get(rightHandComponnet.renderComponent, FetchName, ref dummyComponent);
             AddAvatarComponent(ref HandRight, dummyComponent);
+            HandRight.SetHandTexture(CurrentTexture);
             HandRight.isLeftHand = false;
         }
 

@@ -163,6 +163,22 @@ PrefabInstance:
       propertyPath: CanOwnMicrophone
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: de256c783ab6f83479f08dc6a179312d, type: 3}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: CurrentMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 62d5628b5ceb95c438fa5f1f4cb81715, type: 3}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: CurrentTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 602f1827deef3694985516d3c093bc8e, type: 3}
+    - target: {fileID: 11441414, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
 --- !u!4 &739182 stripped
@@ -4543,7 +4559,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
-  controlMethod: 5
+  controlMethod: 0
   submitButtonName: Fire1
   gazeUseTimedClick: 0
   gazeClickTimer: 2
