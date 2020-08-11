@@ -4559,7 +4559,7 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
-  controlMethod: 0
+  controlMethod: 5
   submitButtonName: Fire1
   gazeUseTimedClick: 0
   gazeClickTimer: 2
