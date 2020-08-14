@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -37,12 +38,17 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
+        PlayBtn.onClick.AddListener(Play);
         SettingsBtn.onClick.AddListener(OpenSettingsPanel);
         CreditsBtn.onClick.AddListener(() => { StartCoroutine(OpenCreditsPanel()); });
         CloseSettingsBtn.onClick.AddListener(CloseSettingsPanel);
         ExitBtn.onClick.AddListener(Exit);
         LeftHandBtn.onClick.AddListener(SetHandToLeft);
         RightHandBtn.onClick.AddListener(SetHandToRight);
+    }
+
+    public void Play() {
+        SceneManager.LoadScene("Environment");
     }
 
     public void Open()
