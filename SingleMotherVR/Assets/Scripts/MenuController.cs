@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public Button CreditsBtn;
     public Button ExitBtn;
 
+    public GameObject Trailer;
     public GameObject MenuContainer;
     public GameObject MainMenuPanel;
     public GameObject SettingsPanel;
@@ -54,17 +55,20 @@ public class MenuController : MonoBehaviour
     public void Open()
     {
         DarkBGCanvas.SetActive(true);
+        Trailer.SetActive(true);
         StartCoroutine(Opening());
     }
 
     public void SimpleOpen() {
         Canvas.SetActive(true);
+        Trailer.SetActive(true);
     }
 
     IEnumerator Opening()
     {
         yield return new WaitForSeconds(0.4f);
         Canvas.SetActive(true);
+        Trailer.SetActive(true);
         DarkBGCanvas.SetActive(false);
     }
 
@@ -116,6 +120,7 @@ public class MenuController : MonoBehaviour
         CreditsController.Open();
         yield return new WaitForSeconds(0.4f);
         MenuContainer.SetActive(false);
+        Trailer.SetActive(false);
     }
 
     void Exit() {
