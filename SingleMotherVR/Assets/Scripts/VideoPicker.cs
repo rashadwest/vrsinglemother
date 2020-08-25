@@ -10,12 +10,22 @@ public class VideoPicker : MonoBehaviour
 
     public Button CloseBtn;
 
+    public Transform Avatar;
+
+    private Vector3 AvatarPos;
+
     private void Awake()
     {
         CloseBtn.onClick.AddListener(Close);
     }
 
+    private void Start()
+    {
+        Avatar.localPosition = AvatarPos;
+    }
+
     public void PickVideo() {
+        AvatarPos = Avatar.localPosition;
         int videoId = Random.Range(1, 5);
         string videoUrl = VideoUrls[videoId-1];
 
