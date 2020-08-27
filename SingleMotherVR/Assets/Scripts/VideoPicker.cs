@@ -21,11 +21,20 @@ public class VideoPicker : MonoBehaviour
 
     private void Start()
     {
-        Avatar.localPosition = AvatarPos;
+        if (PlayerPrefs.GetString("AvatarPos") != "")
+        {
+            string[] avatarPos = PlayerPrefs.GetString("AvatarPos").Trim('(').Trim(')').Split(',');
+            var x = float.Parse(avatarPos[0]);
+            var y = float.Parse(avatarPos[1].Trim(' '));
+            var z = float.Parse(avatarPos[2].Trim(' '));
+
+            AvatarPos = new Vector3(x, y, z);
+            Avatar.localPosition = AvatarPos;
+        }
     }
 
     public void PickVideo() {
-        AvatarPos = Avatar.localPosition;
+        PlayerPrefs.SetString("AvatarPos", Avatar.localPosition.ToString());
         int videoId = Random.Range(1, 5);
         string videoUrl = VideoUrls[videoId-1];
 

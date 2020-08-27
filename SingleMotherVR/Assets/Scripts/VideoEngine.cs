@@ -11,6 +11,7 @@ public class VideoEngine : MonoBehaviour
 
     public Button CloseBtn;
 
+
     private void Awake()
     {
         CloseBtn.onClick.AddListener(Close);
@@ -26,7 +27,8 @@ public class VideoEngine : MonoBehaviour
         VideoPlayer.OpenVideoFromFile(MediaPlayer.FileLocation.AbsolutePathOrURL, videoUrl, true);
     }
 
-    void Close() {
+    void Close()
+    {
         SceneManager.LoadScene("Environment");
     }
 }
