@@ -23,6 +23,8 @@ public class MenuController : MonoBehaviour
     public Button CloseSettingsBtn;
     public Button LeftHandBtn;
     public Button RightHandBtn;
+    public Button BreathOnBtn;
+    public Button BreathOffBtn;
 
     public CurvedUIInputModule EventSystem;
 
@@ -46,6 +48,8 @@ public class MenuController : MonoBehaviour
         ExitBtn.onClick.AddListener(Exit);
         LeftHandBtn.onClick.AddListener(SetHandToLeft);
         RightHandBtn.onClick.AddListener(SetHandToRight);
+        BreathOnBtn.onClick.AddListener(SetBreathOn);
+        BreathOffBtn.onClick.AddListener(SetBreathOff);
     }
 
     public void Play() {
@@ -76,6 +80,7 @@ public class MenuController : MonoBehaviour
         MainMenuPanel.SetActive(false);
         SettingsPanel.SetActive(true);
         CheckSettingsHand();
+        CheckBreathing();
     }
 
     void CloseSettingsPanel()
@@ -97,6 +102,25 @@ public class MenuController : MonoBehaviour
         }
     }
 
+    void CheckBreathing()
+    {
+        if (PlayerPrefs.GetString("Breathing") == "on")
+        {
+            BreathOnBtn.interactable = false;
+            BreathOffBtn.interactable = true;
+        }
+        else if (PlayerPrefs.GetString("Breathing") == "off")
+        {
+            BreathOnBtn.interactable = true;
+            BreathOffBtn.interactable = false;
+        }
+        else
+        {
+            BreathOnBtn.interactable = false;
+            BreathOffBtn.interactable = true;
+        }
+    }
+
     void SetHandToLeft()
     {
         PlayerPrefs.SetString("Hand", "left");
@@ -113,6 +137,20 @@ public class MenuController : MonoBehaviour
         HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
         LeftHandBtn.interactable = true;
         RightHandBtn.interactable = false;
+    }
+
+    void SetBreathOn()
+    {
+        PlayerPrefs.SetString("Breathing", "on");
+        BreathOnBtn.interactable = false;
+        BreathOffBtn.interactable = true;
+    }
+
+    void SetBreathOff()
+    {
+        PlayerPrefs.SetString("Breathing", "off");
+        BreathOnBtn.interactable = true;
+        BreathOffBtn.interactable = false;
     }
 
     IEnumerator OpenCreditsPanel()
