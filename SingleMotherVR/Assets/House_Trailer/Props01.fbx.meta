@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 43cc3adb84013ab42a696f9e6799bff0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bed01
+    100002: Bed_Handle
+    100004: Bed_Top
+    100006: bill01
+    100008: Cn01
+    100010: Cn10
+    100012: Cn50
+    100014: Dl01
+    100016: Dl05
+    100018: Dl10
+    100020: Frame01
+    100022: Frame01.001
+    100024: Frame01.002
+    100026: Iphone
+    100028: Noddle_Boc
+    100030: NurbsPath
+    100032: //RootNode
+    100034: Roach.001
+    100036: Roach.002
+    100038: Roach.003
+    100040: TV01
+    100042: TV_Wire
+    400000: Bed01
+    400002: Bed_Handle
+    400004: Bed_Top
+    400006: bill01
+    400008: Cn01
+    400010: Cn10
+    400012: Cn50
+    400014: Dl01
+    400016: Dl05
+    400018: Dl10
+    400020: Frame01
+    400022: Frame01.001
+    400024: Frame01.002
+    400026: Iphone
+    400028: Noddle_Boc
+    400030: NurbsPath
+    400032: //RootNode
+    400034: Roach.001
+    400036: Roach.002
+    400038: Roach.003
+    400040: TV01
+    400042: TV_Wire
+    2100000: plast.001
+    2100002: plast1.001
+    2100004: lamp
+    2100006: Bill01
+    2100008: Coins.001
+    2100010: plast4.001
+    2100012: American Roach Top V.001
+    2100014: Noodle
+    2100016: metal1.001
+    2300000: Bed01
+    2300002: Bed_Handle
+    2300004: Bed_Top
+    2300006: bill01
+    2300008: Cn01
+    2300010: Cn10
+    2300012: Cn50
+    2300014: Dl01
+    2300016: Dl05
+    2300018: Dl10
+    2300020: Frame01
+    2300022: Frame01.001
+    2300024: Frame01.002
+    2300026: Iphone
+    2300028: Noddle_Boc
+    2300030: NurbsPath
+    2300032: Roach.001
+    2300034: Roach.002
+    2300036: Roach.003
+    2300038: TV01
+    2300040: TV_Wire
+    3300000: Bed01
+    3300002: Bed_Handle
+    3300004: Bed_Top
+    3300006: bill01
+    3300008: Cn01
+    3300010: Cn10
+    3300012: Cn50
+    3300014: Dl01
+    3300016: Dl05
+    3300018: Dl10
+    3300020: Frame01
+    3300022: Frame01.001
+    3300024: Frame01.002
+    3300026: Iphone
+    3300028: Noddle_Boc
+    3300030: NurbsPath
+    3300032: Roach.001
+    3300034: Roach.002
+    3300036: Roach.003
+    3300038: TV01
+    3300040: TV_Wire
+    4300000: Noddle_Boc
+    4300002: Iphone
+    4300004: bill01
+    4300006: Cn01
+    4300008: Cn10
+    4300010: Cn50
+    4300012: Dl01
+    4300014: Dl05
+    4300016: Dl10
+    4300018: Bed01
+    4300020: Bed_Top
+    4300022: Bed_Handle
+    4300024: Roach.001
+    4300026: Roach.002
+    4300028: NurbsPath
+    4300030: Frame01
+    4300032: Frame01.001
+    4300034: Frame01.002
+    4300036: TV01
+    4300038: TV_Wire
+    7400000: Roach.001|Roach.001Action
+    7400002: Roach.001|Roach.001Action.001
+    7400004: Roach.001|RoachAction
+    7400006: Roach.003|Roach.001Action
+    7400008: Roach.003|Roach.001Action.001
+    7400010: Roach.003|RoachAction
+    7400012: Roach.002|Roach.001Action
+    7400014: Roach.002|Roach.001Action.001
+    7400016: Roach.002|RoachAction
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
