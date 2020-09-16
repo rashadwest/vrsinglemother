@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public Button CreditsBtn;
     public Button ExitBtn;
 
+    public GameObject Container;
     public GameObject Trailer;
     public GameObject MenuContainer;
     public GameObject MainMenuPanel;

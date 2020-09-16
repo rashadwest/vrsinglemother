@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StarterPackController : MonoBehaviour
 {
@@ -11,8 +12,6 @@ public class StarterPackController : MonoBehaviour
     public GameObject HandsPanel;
     public GameObject Sphere;
     public GameObject Canvas;
-
-    public MenuController MenuPack;
 
     public Button ContinueBtn;
 
@@ -64,7 +63,7 @@ public class StarterPackController : MonoBehaviour
         HandsPanel.SetActive(false);
         Sphere.SetActive(false);
         Canvas.SetActive(false);
-        MenuPack.Open();
+        SceneManager.LoadScene("MenuScene");
     }
 
     void SetHandToLeft() {
