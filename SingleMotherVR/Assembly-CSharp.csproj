@@ -308,6 +308,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
     <Compile Include="Assets\Scripts\Breathing.cs" />
     <Compile Include="Assets\Scripts\BreathingCheck.cs" />
+    <Compile Include="Assets\Scripts\ChangeTvVideos.cs" />
     <Compile Include="Assets\Scripts\ChildCryingEffect.cs" />
     <Compile Include="Assets\Scripts\CreditsController.cs" />
     <Compile Include="Assets\Scripts\CreditsSponsorsSidePanels.cs" />
