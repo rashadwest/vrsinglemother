@@ -7,6 +7,7 @@ public class Breathing : MonoBehaviour
     public ParticleSystem FrostEffect;
 
     public AudioSource BreathingSoundEffect;
+    public AudioSource ChildCryingSoundEffect;
 
     public Material Material;
 
@@ -38,6 +39,7 @@ public class Breathing : MonoBehaviour
 
         Material.mainTexture = InFrost;
         BreathingSoundEffect.volume = 0.2f;
+        ChildCryingSoundEffect.Play();
     }
 
     private void OnTriggerExit(Collider other)
@@ -47,5 +49,6 @@ public class Breathing : MonoBehaviour
 
         Material.mainTexture = OutFrost;
         BreathingSoundEffect.volume = 0.5f;
+        ChildCryingSoundEffect.Stop();
     }
 }
