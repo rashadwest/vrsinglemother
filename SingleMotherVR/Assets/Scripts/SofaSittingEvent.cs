@@ -6,6 +6,11 @@ public class SofaSittingEvent : MonoBehaviour
 {
     private Transform Target;
 
+    public MainEngine Engine;
+
+    public SofaShiningEffect SofaShiningEffect;
+
+
     private void Start()
     {
         Target = Camera.main.GetComponent<Transform>();
@@ -16,6 +21,7 @@ public class SofaSittingEvent : MonoBehaviour
         if (other.transform != Target)
             return;
 
+        Sitting();
     }
 
     private void OnTriggerExit(Collider other)
@@ -23,5 +29,10 @@ public class SofaSittingEvent : MonoBehaviour
         if (other.transform != Target)
             return;
 
+    }
+
+    void Sitting() {
+        SofaShiningEffect.EndShining();
+        Engine.SittingSofa();
     }
 }

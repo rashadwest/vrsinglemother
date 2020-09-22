@@ -10,6 +10,8 @@ public class SofaShiningEffect : MonoBehaviour
 
     private float StartTime;
 
+    private bool isEnded = false;
+
     private void Start()
     {
         StartTime = Time.time;
@@ -17,7 +19,15 @@ public class SofaShiningEffect : MonoBehaviour
 
     private void Update()
     {
-        float shininess = Mathf.PingPong(Time.time, 0.5f);
-        Renderer.materials[0].SetFloat("_Glossiness", shininess);
+        if (!isEnded)
+        {
+            float shininess = Mathf.PingPong(Time.time, 0.5f);
+            Renderer.materials[0].SetFloat("_Glossiness", shininess);
+        }
+    }
+
+    public void EndShining() {
+        isEnded = true;
+        Renderer.materials[0].SetFloat("_Glossiness", 0);
     }
 }
