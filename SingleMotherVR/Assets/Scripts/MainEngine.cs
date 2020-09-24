@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainEngine : MonoBehaviour
 {
     public Transform Avatar;
+    public OVRScreenFade ScreenFade;
 
     private Vector3 AvatarPos;
 
@@ -45,5 +46,11 @@ public class MainEngine : MonoBehaviour
         AvatarChild.localPosition = new Vector3(0,0,0);
 
         EyeCanvas.gameObject.SetActive(true);
+    }
+
+    public void GoToMenu() {
+        StartCoroutine(ScreenFade.Fade(0, 1, value => {
+            SceneManager.LoadScene("MenuScene");
+        })); 
     }
 }

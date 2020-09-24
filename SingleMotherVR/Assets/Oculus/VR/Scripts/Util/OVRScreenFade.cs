@@ -15,6 +15,7 @@ permissions and limitations under the License.
 ************************************************************************************/
 
 using UnityEngine;
+using System;
 using System.Collections; // required for Coroutines
 
 /// <summary>
@@ -110,7 +111,7 @@ public class OVRScreenFade : MonoBehaviour
 
 		if (fadeOnStart)
 		{
-			StartCoroutine(Fade(1, 0));
+			StartCoroutine(Fade(1, 0, value =>{ }));
 		}
 	}
 
@@ -119,7 +120,7 @@ public class OVRScreenFade : MonoBehaviour
 	/// </summary>
 	public void FadeOut()
     {
-        StartCoroutine(Fade(0,1));
+        StartCoroutine(Fade(0,1, value => { }));
     }
 
 
@@ -128,7 +129,7 @@ public class OVRScreenFade : MonoBehaviour
 	/// </summary>
 	void OnLevelFinishedLoading(int level)
 	{
-		StartCoroutine(Fade(1,0));
+		StartCoroutine(Fade(1,0, value => { }));
 	}
 
 	void OnEnable()
@@ -175,7 +176,7 @@ public class OVRScreenFade : MonoBehaviour
 	/// <summary>
 	/// Fades alpha from 1.0 to 0.0
 	/// </summary>
-	IEnumerator Fade(float startAlpha, float endAlpha)
+	public IEnumerator Fade(float startAlpha, float endAlpha, Action<bool> callback)
 	{
 		float elapsedTime = 0.0f;
 		while (elapsedTime < fadeTime)
@@ -185,6 +186,8 @@ public class OVRScreenFade : MonoBehaviour
             SetMaterialAlpha();
 			yield return new WaitForEndOfFrame();
 		}
+
+        callback.Invoke(true);
 	}
 
     /// <summary>
