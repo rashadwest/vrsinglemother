@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: e34c3950c61cb054b81d987227303c74
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cell_Bars
+    100004: Cell_Ceiling
+    100006: Cell_Floor
+    100008: Cell_wall
+    100010: Door
+    100012: Mattress.001
+    100014: Metal.006
+    100016: Metal.007
+    100018: Metal.008
+    100020: Metal.009
+    100022: Sink
+    100024: Toilet
+    400000: //RootNode
+    400002: Cell_Bars
+    400004: Cell_Ceiling
+    400006: Cell_Floor
+    400008: Cell_wall
+    400010: Door
+    400012: Mattress.001
+    400014: Metal.006
+    400016: Metal.007
+    400018: Metal.008
+    400020: Metal.009
+    400022: Sink
+    400024: Toilet
+    2300000: Cell_Bars
+    2300002: Cell_Ceiling
+    2300004: Cell_Floor
+    2300006: Cell_wall
+    2300008: Door
+    2300010: Mattress.001
+    2300012: Metal.006
+    2300014: Metal.007
+    2300016: Metal.008
+    2300018: Metal.009
+    2300020: Sink
+    2300022: Toilet
+    3300000: Cell_Bars
+    3300002: Cell_Ceiling
+    3300004: Cell_Floor
+    3300006: Cell_wall
+    3300008: Door
+    3300010: Mattress.001
+    3300012: Metal.006
+    3300014: Metal.007
+    3300016: Metal.008
+    3300018: Metal.009
+    3300020: Sink
+    3300022: Toilet
+    4300000: Cell_wall
+    4300002: Cell_Floor
+    4300004: Door
+    4300006: Sink
+    4300008: Toilet
+    4300010: Mattress.001
+    4300012: Cell_Ceiling
+    4300014: Metal.006
+    4300016: Cell_Bars
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete_grout
+    second: {fileID: 2100000, guid: bbdb85e3d2560f14390c461f740bd38a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 0b708d794c6d11443a254f55501ef4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mattress
+    second: {fileID: 2100000, guid: c6b0958a19fd3cf4dac8b735a9ac084d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal1
+    second: {fileID: 2100000, guid: 05a5eecc9dcdfc84db38aba5907eb82f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_Black
+    second: {fileID: 2100000, guid: a20a81397fd0b504db50579fadc488f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_White
+    second: {fileID: 2100000, guid: 2d2cf77c652986644b035fd83f95c919, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_White
+    second: {fileID: 2100000, guid: 67ab4d07aea12784db2b95d270813362, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
