@@ -21,9 +21,18 @@ public class MainEngine : MonoBehaviour
     public float distanceToCamera = 20f;
     private float camHeight;
 
+    [Header("Painting Parts")]
+    public Button BeachSceneBtn;
+    public Button JailSceneBtn;
+
+    private void Awake()
+    {
+        BeachSceneBtn.onClick.AddListener(OpenBeachScene);
+        JailSceneBtn.onClick.AddListener(OpenJailScene);
+    }
+
     private void Start()
     {
-        
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
         if (PlayerPrefs.GetString("AvatarPos") != "")
@@ -52,5 +61,14 @@ public class MainEngine : MonoBehaviour
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("MenuScene");
         })); 
+    }
+
+    void OpenBeachScene() {
+        Debug.LogError("Open Beach Scene");
+    }
+
+    void OpenJailScene()
+    {
+        Debug.LogError("Open Jail Scene");
     }
 }
