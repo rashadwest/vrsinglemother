@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VideoScene.unity
     guid: 533d94b5db931b24a8a52bdbfb925f62
+  - enabled: 1
+    path: Assets/Scenes/Jail.unity
+    guid: e838a25c2ecb33f4ebf163b14f8400b6
+  - enabled: 1
+    path: Assets/Scenes/Beach.unity
+    guid: 72aa8200227913a4a97d10e40f5a265b
   m_configObjects: {}
