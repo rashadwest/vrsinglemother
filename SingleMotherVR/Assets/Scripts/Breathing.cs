@@ -38,7 +38,7 @@ public class Breathing : MonoBehaviour
             return;
 
         Material.mainTexture = InFrost;
-        BreathingSoundEffect.volume = 0.2f;
+        BreathingSoundEffect.volume = 0.1f;
         ChildCryingSoundEffect.Play();
     }
 
@@ -48,7 +48,7 @@ public class Breathing : MonoBehaviour
             return;
 
         Material.mainTexture = OutFrost;
-        BreathingSoundEffect.volume = 0.5f;
+        BreathingSoundEffect.volume = 0.3f;
         ChildCryingSoundEffect.Stop();
     }
 }

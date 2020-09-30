@@ -64,11 +64,19 @@ public class MainEngine : MonoBehaviour
     }
 
     void OpenBeachScene() {
-        Debug.LogError("Open Beach Scene");
+        Debug.Log("Open Beach Scene");
+
+        StartCoroutine(ScreenFade.Fade(0, 1, value => {
+            SceneManager.LoadScene("Beach");
+        }));
     }
 
     void OpenJailScene()
     {
-        Debug.LogError("Open Jail Scene");
+        Debug.Log("Open Jail Scene");
+
+        StartCoroutine(ScreenFade.Fade(0, 1, value => {
+            SceneManager.LoadScene("Jail");
+        }));
     }
 }

@@ -314,6 +314,7 @@
     <Compile Include="Assets\Scripts\CreditsSponsorsSidePanels.cs" />
     <Compile Include="Assets\Scripts\ExitToMenuController.cs" />
     <Compile Include="Assets\Scripts\HandCheck.cs" />
+    <Compile Include="Assets\Scripts\JailBreathing.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\SofaShiningEffect.cs" />
