@@ -25,9 +25,4 @@ public class ChangeTvVideos : MonoBehaviour
         
         StartCoroutine(PlayVideos());
     }
-
-    void Update()
-    {
-
-    }
 }
