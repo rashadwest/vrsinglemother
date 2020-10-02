@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 032b7697afbfe4448afaa54e36c171fa
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cell_Bible
+    100002: Cell_Books
+    100004: Cell_Cards
+    100006: Cell_Cigar
+    100008: //RootNode
+    100010: Cell_Radio
+    100012: Cell_Trai
+    400000: Cell_Bible
+    400002: Cell_Books
+    400004: Cell_Cards
+    400006: Cell_Cigar
+    400008: //RootNode
+    400010: Cell_Radio
+    400012: Cell_Trai
+    2300000: Cell_Bible
+    2300002: Cell_Books
+    2300004: Cell_Cards
+    2300006: Cell_Cigar
+    2300008: Cell_Radio
+    2300010: Cell_Trai
+    3300000: Cell_Bible
+    3300002: Cell_Books
+    3300004: Cell_Cards
+    3300006: Cell_Cigar
+    3300008: Cell_Radio
+    3300010: Cell_Trai
+    4300000: Cell_Cards
+    4300002: Cell_Bible
+    4300004: Cell_Books
+    4300006: Cell_Cigar
+    4300008: Cell_Trai
+    4300010: Cell_Radio
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bible_Cover
+    second: {fileID: 2100000, guid: d8ee544d68d82464c9a87220161f204a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bible_Pages
+    second: {fileID: 2100000, guid: db7560503baa2d84591e219f14c28dda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1
+    second: {fileID: 2100000, guid: b159d87ad2ed97a49aadfb249ec169a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book2
+    second: {fileID: 2100000, guid: 720ef8fa33ae36743b6f45dbcf13541a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book3
+    second: {fileID: 2100000, guid: 76275ec32b43fd14cbd9c7073a8cc6a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4
+    second: {fileID: 2100000, guid: 436c4de1f0fa40c48a6aec90e4f46e33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cards
+    second: {fileID: 2100000, guid: 3ba5d491a9ece4e4684a88d4b79eb9bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cigarrete_Filter
+    second: {fileID: 2100000, guid: 254ee14615bd0a6469099eaf3066d414, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 0b708d794c6d11443a254f55501ef4da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal1
+    second: {fileID: 2100000, guid: 05a5eecc9dcdfc84db38aba5907eb82f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Noodles
+    second: {fileID: 2100000, guid: daf759a97148bcf43891e7a7e23d17ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PCB
+    second: {fileID: 2100000, guid: f47da5ff737c8c145ac49213f8f82854, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plaster_Black
+    second: {fileID: 2100000, guid: a20a81397fd0b504db50579fadc488f8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
