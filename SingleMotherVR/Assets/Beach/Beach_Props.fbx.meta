@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: e75bb90a0fe3d6e48b61aeb7d827d773
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Beach_Bag
+    100002: Beach_Chair
+    100004: Beach_Coconut
+    100006: Beach_Cooler
+    100008: Beach_fruit
+    100010: Beach_Magazine
+    100012: //RootNode
+    100014: Beach_table
+    100016: Iphone
+    400000: Beach_Bag
+    400002: Beach_Chair
+    400004: Beach_Coconut
+    400006: Beach_Cooler
+    400008: Beach_fruit
+    400010: Beach_Magazine
+    400012: //RootNode
+    400014: Beach_table
+    400016: Iphone
+    2300000: Beach_Bag
+    2300002: Beach_Chair
+    2300004: Beach_Coconut
+    2300006: Beach_Cooler
+    2300008: Beach_fruit
+    2300010: Beach_Magazine
+    2300012: Beach_table
+    2300014: Iphone
+    3300000: Beach_Bag
+    3300002: Beach_Chair
+    3300004: Beach_Coconut
+    3300006: Beach_Cooler
+    3300008: Beach_fruit
+    3300010: Beach_Magazine
+    3300012: Beach_table
+    3300014: Iphone
+    4300000: Beach_Magazine
+    4300002: Beach_Bag
+    4300004: Beach_Chair
+    4300006: Beach_Cooler
+    4300008: Beach_table
+    4300010: Beach_fruit
+    4300012: Beach_Coconut
+    4300014: Iphone
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bible_Cover
+    second: {fileID: 2100000, guid: d8ee544d68d82464c9a87220161f204a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book1
+    second: {fileID: 2100000, guid: b159d87ad2ed97a49aadfb249ec169a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book4
+    second: {fileID: 2100000, guid: 436c4de1f0fa40c48a6aec90e4f46e33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coconut
+    second: {fileID: 2100000, guid: 143e14ab5caa1f343a887247a5242a87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Coconut2
+    second: {fileID: 2100000, guid: 1bcaa64d8100966478efd5f3d50dd705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curtain
+    second: {fileID: 2100000, guid: 4fdcfa1f4319f0a4fbb2461e4c564941, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mag
+    second: {fileID: 2100000, guid: 5d0a04f68796cce4b826591bd124eeb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal1
+    second: {fileID: 2100000, guid: 05a5eecc9dcdfc84db38aba5907eb82f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_Blue
+    second: {fileID: 2100000, guid: 5f80c679fde6eb24faa949a8e9523ed9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic_White
+    second: {fileID: 2100000, guid: 67ab4d07aea12784db2b95d270813362, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sheet
+    second: {fileID: 2100000, guid: 39fe834c1a864904ea83e78b5eb6cfda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood01
+    second: {fileID: 2100000, guid: 41d44d3af716c084493536814c2dc422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp
+    second: {fileID: 2100000, guid: 989ed98ee2ee13143a42fbe73b3adb7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plast1.001
+    second: {fileID: 2100000, guid: b5889cb7a9e459840b9ea8e0f976c9e8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
