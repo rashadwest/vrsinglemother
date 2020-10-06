@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainEngine : MonoBehaviour
 {
+    [Header("General")]
     public Transform Avatar;
     public OVRScreenFade ScreenFade;
+    public DayNightSystemController TimeController;
 
     private Vector3 AvatarPos;
 
@@ -34,6 +36,8 @@ public class MainEngine : MonoBehaviour
     private void Start()
     {
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
+
+        TimeController.SetTime();
 
         if (PlayerPrefs.GetString("AvatarPos") != "")
         {
