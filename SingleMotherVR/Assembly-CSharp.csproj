@@ -306,6 +306,8 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPSettings.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
+    <Compile Include="Assets\Scripts\BeachScripts\BeachChairSittingEvent.cs" />
+    <Compile Include="Assets\Scripts\BeachScripts\WaterDangerArea.cs" />
     <Compile Include="Assets\Scripts\Breathing.cs" />
     <Compile Include="Assets\Scripts\BreathingCheck.cs" />
     <Compile Include="Assets\Scripts\ChangeTvVideos.cs" />
@@ -315,14 +317,13 @@
     <Compile Include="Assets\Scripts\DayNightSystemController.cs" />
     <Compile Include="Assets\Scripts\ExitToMenuController.cs" />
     <Compile Include="Assets\Scripts\HandCheck.cs" />
-    <Compile Include="Assets\Scripts\JailBreathing.cs" />
+    <Compile Include="Assets\Scripts\JailScripts\JailBreathing.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Scripts\SofaShiningEffect.cs" />
+    <Compile Include="Assets\Scripts\ShiningEffect.cs" />
     <Compile Include="Assets\Scripts\SofaSittingEvent.cs" />
     <Compile Include="Assets\Scripts\StarterPackController.cs" />
     <Compile Include="Assets\Scripts\VideoEngine.cs" />
-    <Compile Include="Assets\Scripts\WaterDangerArea.cs" />
     <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Lit-Diffuse.shader" />

@@ -8,7 +8,7 @@ public class SofaSittingEvent : MonoBehaviour
 
     public MainEngine Engine;
 
-    public SofaShiningEffect SofaShiningEffect;
+    public ShiningEffect SofaShiningEffect;
 
 
     private void Start()
@@ -22,13 +22,6 @@ public class SofaSittingEvent : MonoBehaviour
             return;
 
         Sitting();
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform != Target)
-            return;
-
     }
 
     void Sitting() {
