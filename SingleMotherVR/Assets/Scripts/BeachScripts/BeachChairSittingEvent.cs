@@ -8,6 +8,7 @@ public class BeachChairSittingEvent : MonoBehaviour
     private Transform Target;
 
     public Transform Avatar;
+    public Transform TrackingSpace;
     public Transform LookAtObject;
     public CharacterController AvatarController;
 
@@ -48,6 +49,7 @@ public class BeachChairSittingEvent : MonoBehaviour
     void Standing()
     {
         ButtonCanvas.SetActive(false);
+        TrackingSpace.localEulerAngles = Vector3.zero;
         Avatar.localPosition = StandPosition;
         AvatarController.enabled = true;
     }

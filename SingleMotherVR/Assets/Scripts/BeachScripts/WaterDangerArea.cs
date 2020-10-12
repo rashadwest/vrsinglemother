@@ -7,6 +7,8 @@ public class WaterDangerArea : MonoBehaviour
 {
     private Transform Target;
 
+    public OVRScreenFade ScreenFade;
+
     private void Start()
     {
         Target = Camera.main.transform;
@@ -21,6 +23,8 @@ public class WaterDangerArea : MonoBehaviour
     }
 
     void ChangePosition() {
-        //SceneManager.LoadScene("Beach");
+        StartCoroutine(ScreenFade.Fade(0,1, value => {
+            SceneManager.LoadScene("Environment");
+        }));
     }
 }

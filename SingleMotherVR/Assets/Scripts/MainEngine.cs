@@ -41,6 +41,7 @@ public class MainEngine : MonoBehaviour
 
         if (PlayerPrefs.GetString("AvatarPos") != "")
         {
+            AvatarController.enabled = false;
             string[] avatarPos = PlayerPrefs.GetString("AvatarPos").Trim('(').Trim(')').Split(',');
             var x = float.Parse(avatarPos[0]);
             var y = float.Parse(avatarPos[1].Trim(' '));
@@ -48,6 +49,7 @@ public class MainEngine : MonoBehaviour
 
             AvatarPos = new Vector3(x, y, z);
             Avatar.localPosition = AvatarPos;
+            AvatarController.enabled = true;
         }
     }
 
@@ -70,6 +72,8 @@ public class MainEngine : MonoBehaviour
     void OpenBeachScene() {
         Debug.Log("Open Beach Scene");
 
+        PlayerPrefs.SetString("AvatarPos", Avatar.localPosition.ToString());
+
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Beach");
         }));
@@ -78,6 +82,8 @@ public class MainEngine : MonoBehaviour
     void OpenJailScene()
     {
         Debug.Log("Open Jail Scene");
+
+        PlayerPrefs.SetString("AvatarPos", Avatar.localPosition.ToString());
 
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Jail");
