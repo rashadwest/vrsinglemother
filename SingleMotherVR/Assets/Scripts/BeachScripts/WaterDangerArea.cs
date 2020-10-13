@@ -24,6 +24,15 @@ public class WaterDangerArea : MonoBehaviour
 
     void ChangePosition() {
         StartCoroutine(ScreenFade.Fade(0,1, value => {
+            if (PlayerPrefs.GetString("Time") == "Day")
+            {
+                PlayerPrefs.SetString("Time", "Night");
+            }
+            else
+            {
+                PlayerPrefs.SetString("Time", "Day");
+            }
+
             SceneManager.LoadScene("Environment");
         }));
     }

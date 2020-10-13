@@ -32,6 +32,7 @@ public class DayNightSystemController : MonoBehaviour
             }
 
             RenderSettings.skybox = DaySkybox;
+            DynamicGI.UpdateEnvironment();
         }
         else if (PlayerPrefs.GetString("Time") == "Night")
         {
@@ -46,6 +47,7 @@ public class DayNightSystemController : MonoBehaviour
             }
 
             RenderSettings.skybox = NightSkybox;
+            DynamicGI.UpdateEnvironment();
         }
     }
 }

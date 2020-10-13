@@ -66,6 +66,15 @@ public class BedLieEvent : MonoBehaviour
         DoorAnim.Play("JailDoorAnim");
 
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
+            if (PlayerPrefs.GetString("Time") == "Day")
+            {
+                PlayerPrefs.SetString("Time", "Night");
+            }
+            else
+            {
+                PlayerPrefs.SetString("Time", "Day");
+            }
+
             SceneManager.LoadScene("Environment");
         }));
     }
