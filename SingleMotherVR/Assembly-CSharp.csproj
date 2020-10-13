@@ -319,6 +319,7 @@
     <Compile Include="Assets\Scripts\HandCheck.cs" />
     <Compile Include="Assets\Scripts\JailScripts\BedLieEvent.cs" />
     <Compile Include="Assets\Scripts\JailScripts\JailBreathing.cs" />
+    <Compile Include="Assets\Scripts\KitchenMissionController.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\ShiningEffect.cs" />
@@ -342,6 +343,7 @@
     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo.cginc" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_Transparent.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
+    <None Include="Assets\Prefabs\Telephone\archibase.net.txt" />
     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Unlit-AndroidOES.shader" />
     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-IMGUI-Transparent.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
