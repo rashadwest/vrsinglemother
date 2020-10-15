@@ -39,6 +39,7 @@ public class BedLieEvent : MonoBehaviour
     {
         Target = Camera.main.transform;
         Canvas.SetActive(false);
+        DoorShiningCanvas.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

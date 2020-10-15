@@ -14,14 +14,17 @@ public class KitchenMissionController : MonoBehaviour
 
     [Header("General")]
     public AudioSource RingingAudio;
+    public AudioSource SpeakingAudio;
     public Animator TelephoneAnim;
     public GameObject Canvas;
     public GameObject Phone;
     public Button StartCallBtn;
+    public Button EndCallBtn;
 
     private void Awake()
     {
-        StartCallBtn.onClick.AddListener(StartCall);
+        StartCallBtn.onClick.AddListener(()=> { StartCoroutine(StartCall()); });
+        EndCallBtn.onClick.AddListener(()=> { StartCoroutine(EndCall()); });
     }
 
     private void Start()
@@ -35,14 +38,15 @@ public class KitchenMissionController : MonoBehaviour
         if (other.transform != Target)
             return;
 
+        StartCoroutine(StartMission());
+    }
+
+    IEnumerator StartMission()
+    {
         Particle.SetActive(false);
         AvatarController.enabled = false;
         Avatar.localPosition = StandingPos;
 
-        StartCoroutine(StartMission());
-    }
-
-    IEnumerator StartMission() {
         yield return new WaitForSeconds(3);
         RingingAudio.enabled = true;
         Canvas.SetActive(true);
@@ -51,10 +55,32 @@ public class KitchenMissionController : MonoBehaviour
         TelephoneAnim.Play("TelephoneRinging");
     }
 
-    void StartCall() {
+    IEnumerator StartCall()
+    {
         TelephoneAnim.enabled = false;
         RingingAudio.enabled = false;
-        Canvas.GetComponent<Animator>().Play("CanvasGroupFadeOut");
         Phone.SetActive(false);
+        Canvas.GetComponent<Animator>().Play("CanvasGroupFadeOut");
+        yield return new WaitForSeconds(0.6f);
+        Canvas.SetActive(false);
+
+        yield return new WaitForSeconds(0.6f);
+        SpeakingAudio.enabled = true;
+        yield return new WaitForSeconds(22.2f);
+        Phone.SetActive(true);
+    }
+
+    IEnumerator EndCall()
+    {
+        TelephoneAnim.enabled = true;
+        RingingAudio.enabled = false;
+        Phone.SetActive(true);
+        Canvas.GetComponent<Animator>().Play("CanvasGroupFadeOut");
+        TelephoneAnim.Play("New State");
+        yield return new WaitForSeconds(0.6f);
+        Canvas.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+        StartCoroutine(StartMission());
     }
 }

@@ -1,0 +1,13 @@
+--Start Call--
+
+Mother - Hello.
+
+Bill Collector - Hello, i am Bill Collector. You have not paid taxes and utility bills for the previous two months.
+
+Mother - Oh sir i can not pay them now.
+
+Bill Collector - I’ll have to turn off the electricity and if you don’t pay soon you will go to jail.
+
+Mother - Sir please...
+
+--End Call--
