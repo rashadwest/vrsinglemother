@@ -326,6 +326,7 @@
     <Compile Include="Assets\Scripts\SofaSittingEvent.cs" />
     <Compile Include="Assets\Scripts\StarterPackController.cs" />
     <Compile Include="Assets\Scripts\VideoEngine.cs" />
+    <Compile Include="Assets\Scripts\YardWorkController.cs" />
     <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
     <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Lit-Diffuse.shader" />
