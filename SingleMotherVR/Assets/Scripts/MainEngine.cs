@@ -37,8 +37,6 @@ public class MainEngine : MonoBehaviour
     {
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
-        PlayerPrefs.SetString("Time", "Day");
-
         TimeController.SetTime();
 
         if (PlayerPrefs.GetString("AvatarPos") != "")

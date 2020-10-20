@@ -322,6 +322,7 @@
     <Compile Include="Assets\Scripts\KitchenMissionController.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\RuntimePlatformCheck.cs" />
     <Compile Include="Assets\Scripts\ShiningEffect.cs" />
     <Compile Include="Assets\Scripts\SofaSittingEvent.cs" />
     <Compile Include="Assets\Scripts\StarterPackController.cs" />
