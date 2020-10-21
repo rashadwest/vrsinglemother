@@ -20,6 +20,8 @@ public class KitchenMissionController : MonoBehaviour
     public GameObject Phone;
     public Button StartCallBtn;
     public Button EndCallBtn;
+    public GameObject LabelCanvas;
+    public Text LabelText;
 
     private void Awake()
     {
@@ -66,8 +68,37 @@ public class KitchenMissionController : MonoBehaviour
 
         yield return new WaitForSeconds(0.6f);
         SpeakingAudio.enabled = true;
+        StartCoroutine(PlaySubtitles());
         yield return new WaitForSeconds(22.2f);
         Phone.SetActive(true);
+        LabelCanvas.GetComponent<Animator>().Play("CanvasGroupFadeOut");
+        yield return new WaitForSeconds(0.6f);
+        LabelCanvas.SetActive(false);
+    }
+
+    IEnumerator PlaySubtitles() {
+        LabelCanvas.SetActive(true);
+        LabelCanvas.GetComponent<Animator>().Play("CanvasGroupFadeIn");
+
+        LabelText.color = Color.white;
+        LabelText.text = "Hello...";
+        yield return new WaitForSeconds(1.8f);
+        LabelText.text = "Hello, i am Bill Collector";
+        yield return new WaitForSeconds(2f);
+        LabelText.text = "You have not paid taxes and utility";
+        yield return new WaitForSeconds(2f);
+        LabelText.text = "Bills for the previous two months.";
+        yield return new WaitForSeconds(2.5f);
+        LabelText.text = "Oh sir i can not pay them now...";
+        yield return new WaitForSeconds(2.5f);
+        LabelText.text = "I’ll have to turn off the electricity and";
+        yield return new WaitForSeconds(2f);
+        LabelText.text = "If you don’t pay soon you will go to jail.";
+        yield return new WaitForSeconds(3f);
+        LabelText.text = "Sir please...";
+        yield return new WaitForSeconds(1.2f);
+        LabelText.color = Color.red;
+        LabelText.text = "...Call end...";
     }
 
     IEnumerator EndCall()

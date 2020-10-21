@@ -320,6 +320,7 @@
     <Compile Include="Assets\Scripts\JailScripts\BedLieEvent.cs" />
     <Compile Include="Assets\Scripts\JailScripts\JailBreathing.cs" />
     <Compile Include="Assets\Scripts\KitchenMissionController.cs" />
+    <Compile Include="Assets\Scripts\LawnMowerMissionController.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\RuntimePlatformCheck.cs" />
