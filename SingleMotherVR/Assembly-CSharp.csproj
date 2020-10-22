@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\CreditsSponsorsSidePanels.cs" />
     <Compile Include="Assets\Scripts\DayNightSystemController.cs" />
     <Compile Include="Assets\Scripts\ExitToMenuController.cs" />
+    <Compile Include="Assets\Scripts\GrassCuttingController.cs" />
     <Compile Include="Assets\Scripts\HandCheck.cs" />
     <Compile Include="Assets\Scripts\JailScripts\BedLieEvent.cs" />
     <Compile Include="Assets\Scripts\JailScripts\JailBreathing.cs" />
