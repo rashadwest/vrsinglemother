@@ -6,18 +6,25 @@ public class GrassCuttingController : MonoBehaviour
 {
     private Transform Target;
 
+    public bool Enabled = false;
+
     private void Start()
     {
-        StartCoroutine(FindTarget());
+        FindTarget();
     }
 
-    IEnumerator FindTarget() {
-        yield return new WaitForSeconds(1);
+    void FindTarget() {
         Target = GameObject.FindGameObjectWithTag("LawnMower").transform;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (Enabled)
+        {
+            if (other.transform != Target)
+                return;
+
+            Destroy(gameObject);
+        }
     }
 }
