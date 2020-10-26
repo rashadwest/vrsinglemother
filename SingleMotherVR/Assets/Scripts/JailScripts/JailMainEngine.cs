@@ -13,7 +13,7 @@ public class JailMainEngine : MonoBehaviour
         ScreenFade.enabled = true;
         PostProcessingEffects.SetValuesOne();
         yield return new WaitForSeconds(2f);
-        //PostProcessingEffects.PlayToZero();
+        PostProcessingEffects.PlayToZero();
     }
 }
 

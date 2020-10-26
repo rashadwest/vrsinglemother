@@ -62,6 +62,7 @@ public class PostProcessingEffects : MonoBehaviour
         if (SetToOne)
         {
             Color.saturation.value = Mathf.Lerp(Color.saturation.value, -100, 1f * Time.deltaTime);
+
             Vignate.intensity.value = Mathf.Lerp(Vignate.intensity.value, 0.4f, 1f * Time.deltaTime);
             Vignate.smoothness.value = Mathf.Lerp(Vignate.smoothness.value, 1, 1f * Time.deltaTime);
         }
@@ -69,6 +70,7 @@ public class PostProcessingEffects : MonoBehaviour
         if (SetToZero)
         {
             Color.saturation.value = Mathf.Lerp(Color.saturation.value, 0, 1f * Time.deltaTime);
+
             Vignate.intensity.value = Mathf.Lerp(Vignate.intensity.value, 0f, 1f * Time.deltaTime);
             Vignate.smoothness.value = Mathf.Lerp(Vignate.smoothness.value, 0, 1f * Time.deltaTime);
         }
