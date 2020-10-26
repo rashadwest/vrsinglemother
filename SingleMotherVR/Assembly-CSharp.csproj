@@ -307,6 +307,7 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPSettings.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
     <Compile Include="Assets\Scripts\BeachScripts\BeachChairSittingEvent.cs" />
+    <Compile Include="Assets\Scripts\BeachScripts\BeachMainEngine.cs" />
     <Compile Include="Assets\Scripts\BeachScripts\WaterDangerArea.cs" />
     <Compile Include="Assets\Scripts\Breathing.cs" />
     <Compile Include="Assets\Scripts\BreathingCheck.cs" />
@@ -321,11 +322,12 @@
     <Compile Include="Assets\Scripts\HandCheck.cs" />
     <Compile Include="Assets\Scripts\JailScripts\BedLieEvent.cs" />
     <Compile Include="Assets\Scripts\JailScripts\JailBreathing.cs" />
+    <Compile Include="Assets\Scripts\JailScripts\JailMainEngine.cs" />
     <Compile Include="Assets\Scripts\KitchenMissionController.cs" />
     <Compile Include="Assets\Scripts\LawnMowerMissionController.cs" />
     <Compile Include="Assets\Scripts\MainEngine.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
-    <Compile Include="Assets\Scripts\PostProcessingExperiment.cs" />
+    <Compile Include="Assets\Scripts\PostProcessingEffects.cs" />
     <Compile Include="Assets\Scripts\RuntimePlatformCheck.cs" />
     <Compile Include="Assets\Scripts\ShiningEffect.cs" />
     <Compile Include="Assets\Scripts\SofaSittingEvent.cs" />
@@ -409,17 +411,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

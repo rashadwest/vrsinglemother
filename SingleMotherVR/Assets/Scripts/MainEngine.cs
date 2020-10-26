@@ -9,6 +9,7 @@ public class MainEngine : MonoBehaviour
     [Header("General")]
     public Transform Avatar;
     public OVRScreenFade ScreenFade;
+    public PostProcessingEffects PostProcessingEffects;
     public DayNightSystemController TimeController;
 
     private Vector3 AvatarPos;
@@ -29,8 +30,8 @@ public class MainEngine : MonoBehaviour
 
     private void Awake()
     {
-        BeachSceneBtn.onClick.AddListener(OpenBeachScene);
-        JailSceneBtn.onClick.AddListener(OpenJailScene);
+        BeachSceneBtn.onClick.AddListener(() => { StartCoroutine(OpenBeachScene());  });
+        JailSceneBtn.onClick.AddListener(()=> { StartCoroutine(OpenJailScene()); });
     }
 
     private void Start()
@@ -38,6 +39,8 @@ public class MainEngine : MonoBehaviour
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
         TimeController.SetTime();
+
+        PostProcessingEffects.SetValuesZero();
 
         if (PlayerPrefs.GetString("AvatarPos") != "")
         {
@@ -69,22 +72,28 @@ public class MainEngine : MonoBehaviour
         })); 
     }
 
-    void OpenBeachScene() {
+    IEnumerator OpenBeachScene() {
         Debug.Log("Open Beach Scene");
 
         PlayerPrefs.SetString("AvatarPos", Avatar.localPosition.ToString());
 
+        PostProcessingEffects.PlayToOne();
+
+        yield return new WaitForSeconds(5);
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Beach");
         }));
     }
 
-    void OpenJailScene()
+    IEnumerator OpenJailScene()
     {
         Debug.Log("Open Jail Scene");
 
         PlayerPrefs.SetString("AvatarPos", Avatar.localPosition.ToString());
 
+        PostProcessingEffects.PlayToOne();
+
+        yield return new WaitForSeconds(5);
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Jail");
         }));
