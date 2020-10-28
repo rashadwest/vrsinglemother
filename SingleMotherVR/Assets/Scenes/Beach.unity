@@ -2302,9 +2302,9 @@ GameObject:
   - component: {fileID: 1708604240}
   - component: {fileID: 1708604239}
   - component: {fileID: 1708604238}
-  - component: {fileID: 1708604244}
   - component: {fileID: 1708604242}
   - component: {fileID: 1708604243}
+  - component: {fileID: 1708604244}
   m_Layer: 8
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
@@ -2496,7 +2496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 004c6a8633010a848a8c03096d73d63c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: f85d608a378e762429061901dece5fe0, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
