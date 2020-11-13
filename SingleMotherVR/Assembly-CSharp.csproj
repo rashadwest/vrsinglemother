@@ -401,6 +401,7 @@
     <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\NOTICE.txt" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainPropsShader.shader" />
+    <None Include="Assets\Material\360SpherePano.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Unity Projects/vrsinglemother/SingleMotherVR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
