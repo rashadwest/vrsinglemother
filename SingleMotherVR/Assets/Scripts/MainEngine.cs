@@ -27,6 +27,8 @@ public class MainEngine : MonoBehaviour
     [Header("Painting Parts")]
     public Button BeachSceneBtn;
     public Button JailSceneBtn;
+    public AudioSource RememberAudio;
+    public AudioSource EnjoingAudio;
 
     private void Awake()
     {
@@ -34,7 +36,7 @@ public class MainEngine : MonoBehaviour
         JailSceneBtn.onClick.AddListener(()=> { StartCoroutine(OpenJailScene()); });
     }
 
-    private void Start()
+    IEnumerator Start()
     {
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
@@ -53,6 +55,11 @@ public class MainEngine : MonoBehaviour
             AvatarPos = new Vector3(x, y, z);
             Avatar.localPosition = AvatarPos;
             AvatarController.enabled = true;
+
+
+            EnjoingAudio.enabled = true;
+            yield return new WaitForSeconds(4.3f);
+            EnjoingAudio.enabled = false;
         }
     }
 
@@ -79,7 +86,10 @@ public class MainEngine : MonoBehaviour
 
         PostProcessingEffects.PlayToOne();
 
-        yield return new WaitForSeconds(5);
+        RememberAudio.enabled = true;
+        yield return new WaitForSeconds(3);
+        RememberAudio.enabled = false;
+        
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Beach");
         }));
@@ -93,7 +103,10 @@ public class MainEngine : MonoBehaviour
 
         PostProcessingEffects.PlayToOne();
 
-        yield return new WaitForSeconds(5);
+        RememberAudio.enabled = true;
+        yield return new WaitForSeconds(3);
+        RememberAudio.enabled = false;
+        
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Jail");
         }));
