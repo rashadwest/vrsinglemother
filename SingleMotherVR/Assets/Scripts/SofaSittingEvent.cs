@@ -10,6 +10,7 @@ public class SofaSittingEvent : MonoBehaviour
 
     public ShiningEffect SofaShiningEffect;
 
+    public AudioSource TVAudio;
 
     private void Start()
     {
@@ -21,11 +22,15 @@ public class SofaSittingEvent : MonoBehaviour
         if (other.transform != Target)
             return;
 
-        Sitting();
+        StartCoroutine(Sitting());
     }
 
-    void Sitting() {
+    IEnumerator Sitting() {
         SofaShiningEffect.EndShining();
         Engine.SittingSofa();
+        yield return new WaitForSeconds(1.5f);
+        TVAudio.enabled = true;
+        yield return new WaitForSeconds(4);
+        TVAudio.enabled = false;
     }
 }

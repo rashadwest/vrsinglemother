@@ -8,12 +8,18 @@ public class JailMainEngine : MonoBehaviour
     public OVRScreenFade ScreenFade;
     public PostProcessingEffects PostProcessingEffects;
 
+    public AudioSource JailAudio;
+
     IEnumerator Start()
     {
         ScreenFade.enabled = true;
         PostProcessingEffects.SetValuesOne();
         yield return new WaitForSeconds(2f);
         PostProcessingEffects.PlayToZero();
+        JailAudio.enabled = true;
+        yield return new WaitForSeconds(5f);
+        JailAudio.enabled = false;
+
     }
 }
 
