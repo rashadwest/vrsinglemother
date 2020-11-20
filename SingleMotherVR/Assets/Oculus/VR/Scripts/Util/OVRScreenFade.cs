@@ -24,7 +24,7 @@ using System.Collections; // required for Coroutines
 public class OVRScreenFade : MonoBehaviour
 {
     [Tooltip("Fade duration")]
-	public float fadeTime = 2.0f;
+	public float fadeTime = 1.0f;
 
     [Tooltip("Screen color at maximum fade")]
 	public Color fadeColor = new Color(0.01f, 0.01f, 0.01f, 1.0f);

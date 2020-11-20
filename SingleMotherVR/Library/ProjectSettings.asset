@@ -159,7 +159,7 @@ PlayerSettings:
     Android: com.cxlabs.singlemothervr
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
