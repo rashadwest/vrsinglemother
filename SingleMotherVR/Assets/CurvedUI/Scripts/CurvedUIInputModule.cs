@@ -633,8 +633,8 @@ public class CurvedUIInputModule : StandaloneInputModule {
           CustomControllerButtonState = OVRInput.Get(InteractionButton);
 
             //on GearVR, also check touchpad, as a secondary, optional input.
-            if (activeCont == OVRInput.Controller.Touchpad)
-                CustomControllerButtonState = CustomControllerButtonState || OVRInput.Get(OVRInput.Button.PrimaryTouchpad);
+           // if (activeCont == OVRInput.Controller.Touchpad)
+                //CustomControllerButtonState = CustomControllerButtonState || OVRInput.Get(OVRInput.Button.PrimaryTouchpad);
         }
         else if (usedHand == Hand.Right) // Right Oculus Touch
         {

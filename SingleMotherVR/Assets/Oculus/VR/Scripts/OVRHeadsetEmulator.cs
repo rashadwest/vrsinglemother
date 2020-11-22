@@ -50,10 +50,11 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 	private bool hasSentEvent = false;
 	private bool emulatorHasInitialized = false;
 
+	private CursorLockMode previousCursorLockMode = CursorLockMode.None;
 
 	// Use this for initialization
 	void Start () {
-    }
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -61,11 +62,12 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		{
 			if (OVRManager.OVRManagerinitialized)
 			{
-				Cursor.lockState = CursorLockMode.None;
+				previousCursorLockMode = Cursor.lockState;
 				manager = OVRManager.instance;
 				recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
 				recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
 				emulatorHasInitialized = true;
+				lastFrameEmulationActivated = false;
 			}
 			else
 				return;
@@ -73,7 +75,11 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		bool emulationActivated = IsEmulationActivated();
 		if (emulationActivated)
 		{
-			Cursor.lockState = CursorLockMode.Locked;
+			if (!lastFrameEmulationActivated)
+			{
+				previousCursorLockMode = Cursor.lockState;
+				Cursor.lockState = CursorLockMode.Locked;
+			}
 
 			if (!lastFrameEmulationActivated && resetHmdPoseOnRelease)
 			{
@@ -122,9 +128,10 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 		}
 		else
 		{
-			Cursor.lockState = CursorLockMode.None;
 			if (lastFrameEmulationActivated)
 			{
+				Cursor.lockState = previousCursorLockMode;
+
 				recordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;
 				recordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;
 
@@ -171,5 +178,4 @@ public class OVRHeadsetEmulator : MonoBehaviour {
 
 		return false;
 	}
-
 }

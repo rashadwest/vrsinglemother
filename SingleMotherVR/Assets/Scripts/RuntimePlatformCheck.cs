@@ -13,7 +13,7 @@ public class RuntimePlatformCheck : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {
-            CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.MOUSE;
+            CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.OCULUSVR;
         }
         else
         {

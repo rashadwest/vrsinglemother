@@ -23,19 +23,6 @@ public class OvrAvatarComponent : MonoBehaviour
     protected OvrAvatar owner = null;
     protected ovrAvatarComponent nativeAvatarComponent = new ovrAvatarComponent();
 
-    public void SetHandTexture(Texture Txt)
-    {
-        foreach (var item in RenderParts)
-        {
-            SkinnedMeshRenderer skin = item.GetComponent<SkinnedMeshRenderer>();
-            if (skin != null)
-            {
-                skin.material.mainTexture = Txt;
-                //skin.material = Material;
-            }
-        }
-    }
-
     public void SetOvrAvatarOwner(OvrAvatar ovrAvatarOwner)
     {
         owner = ovrAvatarOwner;

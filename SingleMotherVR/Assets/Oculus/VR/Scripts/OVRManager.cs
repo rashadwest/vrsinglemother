@@ -18,6 +18,10 @@ permissions and limitations under the License.
 #define USING_XR_SDK
 #endif
 
+#if UNITY_2020_1_OR_NEWER
+#define REQUIRES_XR_SDK
+#endif
+
 #if UNITY_ANDROID && !UNITY_EDITOR
 #define OVR_ANDROID_MRC
 #endif
@@ -79,6 +83,34 @@ public class OVRManager : MonoBehaviour
 		LMSMedium = OVRPlugin.TiledMultiResLevel.LMSMedium,
 		LMSHigh = OVRPlugin.TiledMultiResLevel.LMSHigh,
 		LMSHighTop = OVRPlugin.TiledMultiResLevel.LMSHighTop,
+	}
+
+	public enum SystemHeadsetType
+	{
+		None = OVRPlugin.SystemHeadset.None,
+
+		// Standalone headsets
+		Oculus_Quest = OVRPlugin.SystemHeadset.Oculus_Quest,
+		Oculus_Quest_2 = OVRPlugin.SystemHeadset.Oculus_Quest_2,
+		Placeholder_10 = OVRPlugin.SystemHeadset.Placeholder_10,
+		Placeholder_11 = OVRPlugin.SystemHeadset.Placeholder_11,
+		Placeholder_12 = OVRPlugin.SystemHeadset.Placeholder_12,
+		Placeholder_13 = OVRPlugin.SystemHeadset.Placeholder_13,
+		Placeholder_14 = OVRPlugin.SystemHeadset.Placeholder_14,
+
+		// PC headsets
+		Rift_DK1 = OVRPlugin.SystemHeadset.Rift_DK1,
+		Rift_DK2 = OVRPlugin.SystemHeadset.Rift_DK2,
+		Rift_CV1 = OVRPlugin.SystemHeadset.Rift_CV1,
+		Rift_CB = OVRPlugin.SystemHeadset.Rift_CB,
+		Rift_S = OVRPlugin.SystemHeadset.Rift_S,
+		Oculus_Link_Quest = OVRPlugin.SystemHeadset.Oculus_Link_Quest,
+		PC_Placeholder_4102 = OVRPlugin.SystemHeadset.PC_Placeholder_4102,
+		PC_Placeholder_4103 = OVRPlugin.SystemHeadset.PC_Placeholder_4103,
+		PC_Placeholder_4104 = OVRPlugin.SystemHeadset.PC_Placeholder_4104,
+		PC_Placeholder_4105 = OVRPlugin.SystemHeadset.PC_Placeholder_4105,
+		PC_Placeholder_4106 = OVRPlugin.SystemHeadset.PC_Placeholder_4106,
+		PC_Placeholder_4107 = OVRPlugin.SystemHeadset.PC_Placeholder_4107
 	}
 
 	public enum XRDevice
@@ -297,12 +329,6 @@ public class OVRManager : MonoBehaviour
 	}
 
 	[Header("Performance/Quality")]
-	/// <summary>
-	/// If true, distortion rendering work is submitted a quarter-frame early to avoid pipeline stalls and increase CPU-GPU parallelism.
-	/// </summary>
-	[Tooltip("If true, distortion rendering work is submitted a quarter-frame early to avoid pipeline stalls and increase CPU-GPU parallelism.")]
-	public bool queueAhead = true;
-
 	/// <summary>
 	/// If true, Unity will use the optimal antialiasing level for quality/performance on the current hardware.
 	/// </summary>
@@ -899,10 +925,21 @@ public class OVRManager : MonoBehaviour
 	}
 
 	/// <summary>
+	/// Get the system headset type
+	/// </summary>
+	public static SystemHeadsetType systemHeadsetType
+	{
+		get
+		{
+			return (SystemHeadsetType)OVRPlugin.GetSystemHeadsetType();
+		}
+	}
+
+	/// <summary>
 	/// Sets the Color Scale and Offset which is commonly used for effects like fade-to-black.
 	/// In our compositor, once a given frame is rendered, warped, and ready to be displayed, we then multiply
 	/// each pixel by colorScale and add it to colorOffset, whereby newPixel = oldPixel * colorScale + colorOffset.
-	/// Note that for mobile devices (Quest, Go, etc.), colorOffset is not supported, so colorScale is all that can
+	/// Note that for mobile devices (Quest, etc.), colorOffset is not supported, so colorScale is all that can
 	/// be used. A colorScale of (1, 1, 1, 1) and colorOffset of (0, 0, 0, 0) will lead to an identity multiplication
 	/// and have no effect.
 	/// </summary>
@@ -1008,32 +1045,6 @@ public class OVRManager : MonoBehaviour
 	/// </summary>
 	[Tooltip("If true, the Reset View in the universal menu will cause the pose to be reset. This should generally be enabled for applications with a stationary position in the virtual world and will allow the View Reset command to place the person back to a predefined location (such as a cockpit seat). Set this to false if you have a locomotion system because resetting the view would effectively teleport the player to potentially invalid locations.")]
     public bool AllowRecenter = true;
-
-	[SerializeField]
-	[Tooltip("Specifies HMD recentering behavior when controller recenter is performed. True recenters the HMD as well, false does not.")]
-	private bool _reorientHMDOnControllerRecenter = true;
-	/// <summary>
-	/// Defines the recentering mode specified in the tooltip above.
-	/// </summary>
-	public bool reorientHMDOnControllerRecenter
-	{
-		get
-		{
-			if (!isHmdPresent)
-				return false;
-
-			return OVRPlugin.GetReorientHMDOnControllerRecenter();
-		}
-
-		set
-		{
-			if (!isHmdPresent)
-				return;
-
-			OVRPlugin.SetReorientHMDOnControllerRecenter(value);
-
-		}
-	}
 
 	/// <summary>
 	/// If true, a lower-latency update will occur right before rendering. If false, the only controller pose update will occur at the start of simulation for a given frame.
@@ -1191,7 +1202,7 @@ public class OVRManager : MonoBehaviour
 				"OVRPlugin v" + OVRPlugin.version + ", " +
 				"SDK v" + OVRPlugin.nativeSDKVersion + ".");
 
-		Debug.Log("SystemHeadset " + OVRPlugin.GetSystemHeadsetType().ToString());
+		Debug.Log("SystemHeadset " + systemHeadsetType.ToString());
 
 #if !UNITY_EDITOR
 		if (IsUnityAlphaOrBetaVersion())
@@ -1385,30 +1396,39 @@ public class OVRManager : MonoBehaviour
 	}
 
 #if USING_XR_SDK
-
+	static List<XRDisplaySubsystem> s_displaySubsystems;
 	public static XRDisplaySubsystem GetCurrentDisplaySubsystem()
 	{
-		List<XRDisplaySubsystem> displaySubsystems = new List<XRDisplaySubsystem>();
-		SubsystemManager.GetInstances(displaySubsystems);
-		//Note: Here we are making the assumption that there will always be one valid display subsystem. If there is not, then submitFrame isn't being called,
-		//so for now this is a fine assumption to make.
-		if (displaySubsystems.Count > 0)
-			return displaySubsystems[0];
+		if (s_displaySubsystems == null)
+			s_displaySubsystems = new List<XRDisplaySubsystem>();
+		SubsystemManager.GetInstances(s_displaySubsystems);
+		if (s_displaySubsystems.Count > 0)
+			return s_displaySubsystems[0];
 		return null;
 	}
 
+	static List<XRDisplaySubsystemDescriptor> s_displaySubsystemDescriptors;
 	public static XRDisplaySubsystemDescriptor GetCurrentDisplaySubsystemDescriptor()
 	{
-		List<XRDisplaySubsystemDescriptor> displaySubsystemDescriptors = new List<XRDisplaySubsystemDescriptor>();
-		SubsystemManager.GetSubsystemDescriptors(displaySubsystemDescriptors);
-		if (displaySubsystemDescriptors.Count > 0)
-			return displaySubsystemDescriptors[0];
+		if (s_displaySubsystemDescriptors == null)
+			s_displaySubsystemDescriptors = new List<XRDisplaySubsystemDescriptor>();
+		SubsystemManager.GetSubsystemDescriptors(s_displaySubsystemDescriptors);
+		if (s_displaySubsystemDescriptors.Count > 0)
+			return s_displaySubsystemDescriptors[0];
+		return null;
+	}
+
+	static List<XRInputSubsystem> s_inputSubsystems;
+	public static XRInputSubsystem GetCurrentInputSubsystem()
+	{
+		if (s_inputSubsystems == null)
+			s_inputSubsystems = new List<XRInputSubsystem>();
+		SubsystemManager.GetInstances(s_inputSubsystems);
+		if (s_inputSubsystems.Count > 0)
+			return s_inputSubsystems[0];
 		return null;
 	}
 #endif
-
-
-
 
 	void Initialize()
 	{
@@ -1419,9 +1439,7 @@ public class OVRManager : MonoBehaviour
 		if (boundary == null)
 			boundary = new OVRBoundary();
 
-		reorientHMDOnControllerRecenter = _reorientHMDOnControllerRecenter;
 		SetCurrentXRDevice();
-
 	}
 
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || OVR_ANDROID_MRC

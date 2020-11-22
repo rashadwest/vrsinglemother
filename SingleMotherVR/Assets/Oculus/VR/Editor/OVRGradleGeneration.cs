@@ -135,24 +135,22 @@ public class OVRGradleGeneration
 		UnityEngine.Debug.Log("OVRGradleGeneration triggered.");
 
 		var targetOculusPlatform = new List<string>();
-		if (OVRDeviceSelector.isTargetDeviceGearVrOrGo)
-		{
-			targetOculusPlatform.Add("geargo");
-		}
-		if (OVRDeviceSelector.isTargetDeviceQuest)
+		if (OVRDeviceSelector.isTargetDeviceQuestFamily)
 		{
 			targetOculusPlatform.Add("quest");
 		}
 		OVRPlugin.AddCustomMetadata("target_oculus_platform", String.Join("_", targetOculusPlatform.ToArray()));
-		UnityEngine.Debug.LogFormat("  GearVR or Go = {0}  Quest = {1}", OVRDeviceSelector.isTargetDeviceGearVrOrGo, OVRDeviceSelector.isTargetDeviceQuest);
+		UnityEngine.Debug.LogFormat("QuestFamily = {0}: Quest = {1}, Quest2 = {2}", 
+			OVRDeviceSelector.isTargetDeviceQuestFamily,
+			OVRDeviceSelector.isTargetDeviceQuest,
+			OVRDeviceSelector.isTargetDeviceQuest2);
 
 #if UNITY_2019_3_OR_NEWER
 		string gradleBuildPath = Path.Combine(path, "../launcher/build.gradle");
 #else
 		string gradleBuildPath = Path.Combine(path, "build.gradle");
 #endif
-		//Enable v2signing for Quest only
-		bool v2SigningEnabled = OVRDeviceSelector.isTargetDeviceQuest && !OVRDeviceSelector.isTargetDeviceGearVrOrGo;
+		bool v2SigningEnabled = true;
 
 		if (File.Exists(gradleBuildPath))
 		{
