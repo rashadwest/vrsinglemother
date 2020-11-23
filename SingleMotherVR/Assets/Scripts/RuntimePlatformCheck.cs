@@ -9,15 +9,15 @@ public class RuntimePlatformCheck : MonoBehaviour
 
     void Start()
     {
-        CurvedUI = GetComponent<CurvedUISettings>();
+        //CurvedUI = GetComponent<CurvedUISettings>();
 
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {
-            CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.OCULUSVR;
+            //CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.OCULUSVR;
         }
         else
         {
-            CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.OCULUSVR;
+            //CurvedUI.ControlMethod = CurvedUIInputModule.CUIControlMethod.OCULUSVR;
         }
     }
 }

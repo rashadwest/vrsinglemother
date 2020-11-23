@@ -31,10 +31,11 @@ public class StarterPackController : MonoBehaviour
 
     private void Start()
     {
+
         StartCoroutine(StarterPanelsAnimation());
         PlayerPrefs.SetString("Hand", "left");
-        EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
-        HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
+        //EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
+        //HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
     }
 
     private IEnumerator StarterPanelsAnimation()
@@ -52,7 +53,8 @@ public class StarterPackController : MonoBehaviour
 
     void ShowHandsPanel() {
         IntroPanel.SetActive(false);
-        HandsPanel.SetActive(true);
+        HandsPanel.SetActive(false);
+        SetHandToRight();
     }
 
     private IEnumerator HidePanels() {
@@ -74,9 +76,9 @@ public class StarterPackController : MonoBehaviour
     }
 
     void SetHandToRight() {
-        PlayerPrefs.SetString("Hand", "right");
-        EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
-        HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
+        //PlayerPrefs.SetString("Hand", "right");
+        //EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
+        //HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
         StartCoroutine(HidePanels());
     }
 }

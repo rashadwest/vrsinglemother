@@ -47,8 +47,8 @@ public class MenuController : MonoBehaviour
         CreditsBtn.onClick.AddListener(() => { StartCoroutine(OpenCreditsPanel()); });
         CloseSettingsBtn.onClick.AddListener(CloseSettingsPanel);
         ExitBtn.onClick.AddListener(Exit);
-        LeftHandBtn.onClick.AddListener(SetHandToLeft);
-        RightHandBtn.onClick.AddListener(SetHandToRight);
+        //LeftHandBtn.onClick.AddListener(SetHandToLeft);
+        //RightHandBtn.onClick.AddListener(SetHandToRight);
         BreathOnBtn.onClick.AddListener(SetBreathOn);
         BreathOffBtn.onClick.AddListener(SetBreathOff);
     }

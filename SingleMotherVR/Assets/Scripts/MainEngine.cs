@@ -70,7 +70,7 @@ public class MainEngine : MonoBehaviour
         AvatarController.enabled = false;
         AvatarChild.localPosition = new Vector3(0,0,0);
 
-        EyeCanvas.gameObject.SetActive(true);
+        //EyeCanvas.gameObject.SetActive(true);
     }
 
     public void GoToMenu() {

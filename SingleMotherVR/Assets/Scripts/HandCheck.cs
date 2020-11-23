@@ -13,13 +13,13 @@ public class HandCheck : MonoBehaviour
     {
         if (PlayerPrefs.GetString("Hand") == "left")
         {
-            EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
-            HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
+           // EventSystem.UsedHand = CurvedUIInputModule.Hand.Left;
+            //HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Left);
         }
         else if ((PlayerPrefs.GetString("Hand") == "right"))
         {
-            EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
-            HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
+           // EventSystem.UsedHand = CurvedUIInputModule.Hand.Right;
+           // HandSwitcher.SwitchHandTo(CurvedUIInputModule.Hand.Right);
         }
     }
 }
