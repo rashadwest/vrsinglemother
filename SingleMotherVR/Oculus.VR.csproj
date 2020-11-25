@@ -66,6 +66,7 @@
     <Compile Include="Assets\Oculus\VR\Scripts\OVRProfile.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\OVRDebugHeadController.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\OVRManager.cs" />
+    <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRControllerTest.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRRaycaster.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Composition\OVRDirectComposition.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRMixedRealityCaptureTest.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Oculus\VR\Scripts\OVRLayerAttribute.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRSystemPerfMetrics.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRPhysicsRaycaster.cs" />
+    <Compile Include="Assets\Oculus\VR\Scripts\OVROverlayMeshGenerator.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRGridCube.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRPointerEventData.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRNetwork.cs" />
@@ -127,8 +129,6 @@
     <Compile Include="Assets\Oculus\VR\Scripts\OVRPlugin.cs" />
     <Compile Include="Assets\Oculus\VR\ThirdParty\openvr_api.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRSkeleton.cs" />
-    <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRControllerTest.cs" />
-    <Compile Include="Assets\Oculus\VR\Scripts\OVROverlayMeshGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Oculus\VR\Resources\Texture2D Blit.shader" />

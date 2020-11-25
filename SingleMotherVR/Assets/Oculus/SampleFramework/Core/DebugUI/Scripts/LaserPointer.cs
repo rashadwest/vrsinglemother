@@ -139,13 +139,14 @@ public class LaserPointer : OVRCursor
     {
         if (cursorVisual) cursorVisual.SetActive(false);
     }
+
     public void OnInputFocusLost()
     {
-        if (gameObject && gameObject.activeInHierarchy)
+        /*if (gameObject && gameObject.activeInHierarchy)
         {
             m_restoreOnInputAcquired = true;
             gameObject.SetActive(false);
-        }
+        }*/
     }
 
     public void OnInputFocusAcquired()

@@ -1025,6 +1025,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Oculus.Platform.Editor.csproj">
+      <Project>{87C31153-774C-39D8-D70A-2F0F3BD8A347}</Project>
+      <Name>Oculus.Platform.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
       <Project>{0D93004F-5CE4-25DC-BB4E-182370335D3A}</Project>
       <Name>Oculus.VR.Editor</Name>
@@ -1033,17 +1037,13 @@
       <Project>{389861EF-2068-E8E7-1735-7D2F65362359}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Platform.csproj">
-      <Project>{A6C5A79B-0276-C48C-6DEE-2892AB6F153A}</Project>
-      <Name>Oculus.Platform</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
       <Project>{C174BF51-7570-58EB-C796-37666AB21B07}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Platform.Editor.csproj">
-      <Project>{87C31153-774C-39D8-D70A-2F0F3BD8A347}</Project>
-      <Name>Oculus.Platform.Editor</Name>
+    <ProjectReference Include="Oculus.Platform.csproj">
+      <Project>{A6C5A79B-0276-C48C-6DEE-2892AB6F153A}</Project>
+      <Name>Oculus.Platform</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

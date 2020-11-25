@@ -69,8 +69,10 @@
     <Compile Include="Assets\AVProVideo\Scripts\Editor\ApplyToMaterialEditor.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />
     <Compile Include="Assets\AVProVideo\Scripts\Editor\AudioOutputEditor.cs" />
+    <Compile Include="Assets\Oculus\Spatializer\editor\ONSPAudioPluginUpdaterStub.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Utils\Editor\DrawerInspectorNote.cs" />
+    <Compile Include="Assets\Oculus\Spatializer\editor\ONSPAudioPluginUpdater.cs" />
     <Compile Include="Assets\AVProVideo\Scripts\Editor\SupportWindow.cs" />
     <Compile Include="Assets\CurvedUI\Scripts\Editor\CurvedUIInputModuleEditor.cs" />
     <Compile Include="Assets\Oculus\LipSync\Editor\OVRLipSyncTool.cs" />
@@ -97,8 +99,6 @@
     <Compile Include="Assets\AVProVideo\Scripts\Editor\UpdateStereoMaterialEditor.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Editor\BuildAssetPackages.cs" />
     <Compile Include="Assets\CurvedUI\Scripts\Editor\CurvedUISettingsEditor.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\editor\ONSPAudioPluginUpdaterStub.cs" />
-    <Compile Include="Assets\Oculus\Spatializer\editor\ONSPAudioPluginUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -752,6 +752,10 @@
       <Project>{61E8A155-BF58-AD3D-5463-C36007879332}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="Oculus.Platform.Editor.csproj">
+      <Project>{87C31153-774C-39D8-D70A-2F0F3BD8A347}</Project>
+      <Name>Oculus.Platform.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
       <Project>{0D93004F-5CE4-25DC-BB4E-182370335D3A}</Project>
       <Name>Oculus.VR.Editor</Name>
@@ -760,17 +764,13 @@
       <Project>{389861EF-2068-E8E7-1735-7D2F65362359}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Platform.csproj">
-      <Project>{A6C5A79B-0276-C48C-6DEE-2892AB6F153A}</Project>
-      <Name>Oculus.Platform</Name>
-    </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
       <Project>{C174BF51-7570-58EB-C796-37666AB21B07}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
-    <ProjectReference Include="Oculus.Platform.Editor.csproj">
-      <Project>{87C31153-774C-39D8-D70A-2F0F3BD8A347}</Project>
-      <Name>Oculus.Platform.Editor</Name>
+    <ProjectReference Include="Oculus.Platform.csproj">
+      <Project>{A6C5A79B-0276-C48C-6DEE-2892AB6F153A}</Project>
+      <Name>Oculus.Platform</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

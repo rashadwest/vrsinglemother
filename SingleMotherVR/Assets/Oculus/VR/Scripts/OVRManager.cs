@@ -1181,11 +1181,11 @@ public class OVRManager : MonoBehaviour
 
 #region Unity Messages
 
-	public static bool OVRManagerinitialized = false;
+	public static bool OVRManagerinitialized = true;
 	private void InitOVRManager()
-	{
-		// Only allow one instance at runtime.
-		if (instance != null)
+    {
+        // Only allow one instance at runtime.
+        if (instance != null)
 		{
 			enabled = false;
 			DestroyImmediate(this);
@@ -1336,8 +1336,9 @@ public class OVRManager : MonoBehaviour
 		// Force OcculusionMesh on all the time, you can change the value to false if you really need it be off for some reasons,
 		// be aware there are performance drops if you don't use occlusionMesh.
 		OVRPlugin.occlusionMesh = true;
+        Debug.LogError("AAAAAA");
 #endif
-		OVRManagerinitialized = true;
+        OVRManagerinitialized = true;
 
 	}
 
@@ -1349,7 +1350,9 @@ public class OVRManager : MonoBehaviour
 		InitOVRManager();
 #else
 		if (OVRPlugin.initialized)
-			InitOVRManager();
+        {
+            InitOVRManager();
+        }
 #endif
 	}
 
@@ -1448,22 +1451,23 @@ public class OVRManager : MonoBehaviour
 
 	private void Update()
 	{
-		//Only if we're using the XR SDK do we have to check if OVRManager isn't yet initialized, and init it.
-		//If we're on legacy, we know initialization occurred properly in Awake()
+        //Only if we're using the XR SDK do we have to check if OVRManager isn't yet initialized, and init it.
+        //If we're on legacy, we know initialization occurred properly in Awake()
 #if USING_XR_SDK
-		if (!OVRManagerinitialized)
-		{
-			XRDisplaySubsystem currentDisplaySubsystem = GetCurrentDisplaySubsystem();
-			XRDisplaySubsystemDescriptor currentDisplaySubsystemDescriptor = GetCurrentDisplaySubsystemDescriptor();
-			if (currentDisplaySubsystem == null || currentDisplaySubsystemDescriptor == null || !OVRPlugin.initialized)
-				return;
-			//If we're using the XR SDK and the display subsystem is present, and OVRPlugin is initialized, we can init OVRManager
-			InitOVRManager();
-		}
+        if (!OVRManagerinitialized)
+        {
+            XRDisplaySubsystem currentDisplaySubsystem = GetCurrentDisplaySubsystem();
+            XRDisplaySubsystemDescriptor currentDisplaySubsystemDescriptor = GetCurrentDisplaySubsystemDescriptor();
+            if (currentDisplaySubsystem == null || currentDisplaySubsystemDescriptor == null || !OVRPlugin.initialized)
+                return;
+            //If we're using the XR SDK and the display subsystem is present, and OVRPlugin is initialized, we can init OVRManager
+
+            InitOVRManager();
+        }
 #endif
 
 #if UNITY_EDITOR
-		if (_scriptsReloaded)
+        if (_scriptsReloaded)
 		{
 			_scriptsReloaded = false;
 			instance = this;
