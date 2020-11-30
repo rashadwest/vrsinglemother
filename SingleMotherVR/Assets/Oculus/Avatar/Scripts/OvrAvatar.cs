@@ -114,6 +114,11 @@ public class OvrAvatar : MonoBehaviour
     public Transform LeftHandCustomPose;
     public Transform RightHandCustomPose;
 
+    [Header("Materials")]
+    public Material HandMaterials;
+
+    [Space(20)]
+
     // Avatar asset
     private HashSet<UInt64> assetLoadingIds = new HashSet<UInt64>();
     private bool assetsFinishedLoading = false;
@@ -380,13 +385,16 @@ public class OvrAvatar : MonoBehaviour
             CAPI.ovrAvatarComponent_Get(leftHandComponnet.renderComponent, FetchName, ref dummyComponent);
             AddAvatarComponent(ref HandLeft, dummyComponent);
             HandLeft.isLeftHand = true;
+            HandLeft.GetComponent<OvrAvatarHand>().RenderParts[0].GetComponent<SkinnedMeshRenderer>().material = HandMaterials;
         }
+
 
         if (CAPI.ovrAvatarPose_GetRightHandComponent(sdkAvatar, ref rightHandComponnet))
         {
             CAPI.ovrAvatarComponent_Get(rightHandComponnet.renderComponent, FetchName, ref dummyComponent);
             AddAvatarComponent(ref HandRight, dummyComponent);
             HandRight.isLeftHand = false;
+            HandRight.GetComponent<OvrAvatarHand>().RenderParts[0].GetComponent<SkinnedMeshRenderer>().material = HandMaterials;
         }
 
         if (CAPI.ovrAvatarPose_GetBodyComponent(sdkAvatar, ref bodyComponent))
