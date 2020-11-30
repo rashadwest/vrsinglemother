@@ -1,0 +1,4 @@
+#Mon Nov 30 15:21:35 AMT 2020
+base.0=E\:\\Unity Projects\\vrsinglemother\\SingleMotherVR\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

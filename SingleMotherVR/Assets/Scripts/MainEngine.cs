@@ -68,7 +68,7 @@ public class MainEngine : MonoBehaviour
         Avatar.localPosition = SitPosition;
         Avatar.LookAt(TV);
         AvatarController.enabled = false;
-        AvatarChild.localPosition = new Vector3(0,0,0);
+        AvatarChild.localPosition = new Vector3(0, 0.13f, 0);
 
         //EyeCanvas.gameObject.SetActive(true);
     }
