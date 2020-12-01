@@ -1651,7 +1651,7 @@ ScriptsOnlyBuild:
     className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
-      Hash: 01e77fa3be6464eb9e3e2267702d8cf2
+      Hash: 70d1868ba4862676126f1e7e7665da06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SofaSittingEvent
