@@ -27,9 +27,9 @@ public class KitchenMissionController : MonoBehaviour
 
     private void Awake()
     {
-        StartCallBtn.onClick.AddListener(()=> { StartCoroutine(StartCall()); });
-        EndCallBtn.onClick.AddListener(()=> { StartCoroutine(EndCall()); });
-        ExitButton.onClick.AddListener(()=> { StartCoroutine(QuitMission()); });
+        StartCallBtn.onClick.AddListener(() => { StartCoroutine(StartCall()); });
+        EndCallBtn.onClick.AddListener(() => { StartCoroutine(EndCall()); });
+        ExitButton.onClick.AddListener(() => { StartCoroutine(QuitMission()); });
     }
 
     private void Start()
