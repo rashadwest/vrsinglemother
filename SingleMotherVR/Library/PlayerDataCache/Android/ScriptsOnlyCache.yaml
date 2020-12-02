@@ -24,8 +24,6 @@ ScriptsOnlyBuild:
     - MainEngine
     - MenuController
     - ONSPSettings
-    - OvrAvatar
-    - OvrAvatarLocalDriver
     - OvrAvatarSettings
     - PostProcessingEffects
     - RenderHeads.Media.AVProVideo.ApplyToMesh
@@ -38,6 +36,7 @@ ScriptsOnlyBuild:
     - SofaSittingEvent
     - StarterPackController
     - WaterDangerArea
+    - Waves
     - YardWorkController
     - YardWorkEndTrigger
     Oculus.VR.Editor.dll:
@@ -45,9 +44,11 @@ ScriptsOnlyBuild:
     - OVRConfig
     Oculus.VR.dll:
     - OVRCameraRig
+    - OVRCustomSkeleton
     - OVRDebugInfo
     - OVRGrabbable
     - OVRGrabber
+    - OVRHand
     - OVRHeadsetEmulator
     - OVRManager
     - OVRPlayerController
@@ -185,9 +186,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 13108}
-    - Class: 114
       Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13646}
     - Class: 114
       Script: {instanceID: 13786}
     - Class: 114
@@ -203,9 +204,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14584}
     - Class: 114
-      Script: {instanceID: 14808}
+      Script: {instanceID: 14616}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 14808}
     - Class: 114
       Script: {instanceID: 15070}
     - Class: 114
@@ -219,11 +220,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15838}
     - Class: 114
-      Script: {instanceID: 16126}
+      Script: {instanceID: 15992}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 16128}
     - Class: 114
-      Script: {instanceID: 16478}
+      Script: {instanceID: 16192}
+    - Class: 114
+      Script: {instanceID: 16480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -231,6 +234,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -346,13 +351,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13108}
-    - Class: 114
       Script: {instanceID: 13372}
     - Class: 114
       Script: {instanceID: 13590}
     - Class: 114
       Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13646}
     - Class: 114
       Script: {instanceID: 13786}
     - Class: 114
@@ -372,11 +377,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14516}
     - Class: 114
+      Script: {instanceID: 14616}
+    - Class: 114
       Script: {instanceID: 14746}
     - Class: 114
       Script: {instanceID: 14808}
-    - Class: 114
-      Script: {instanceID: 15038}
     - Class: 114
       Script: {instanceID: 15102}
     - Class: 114
@@ -392,13 +397,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15838}
     - Class: 114
-      Script: {instanceID: 16064}
+      Script: {instanceID: 16066}
     - Class: 114
-      Script: {instanceID: 16126}
+      Script: {instanceID: 16128}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 16192}
     - Class: 114
-      Script: {instanceID: 16478}
+      Script: {instanceID: 16480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -406,6 +411,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -462,6 +469,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -485,21 +494,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 13108}
-    - Class: 114
       Script: {instanceID: 13426}
     - Class: 114
       Script: {instanceID: 13492}
     - Class: 114
       Script: {instanceID: 13596}
     - Class: 114
+      Script: {instanceID: 13646}
+    - Class: 114
       Script: {instanceID: 13786}
+    - Class: 114
+      Script: {instanceID: 14616}
     - Class: 114
       Script: {instanceID: 14698}
     - Class: 114
       Script: {instanceID: 14808}
-    - Class: 114
-      Script: {instanceID: 15038}
     - Class: 114
       Script: {instanceID: 15130}
     - Class: 114
@@ -515,14 +524,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15814}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 16192}
     - Class: 114
-      Script: {instanceID: 16534}
+      Script: {instanceID: 16536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -620,9 +631,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13108}
-    - Class: 114
       Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13646}
     - Class: 114
       Script: {instanceID: 13652}
     - Class: 114
@@ -640,9 +651,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14548}
     - Class: 114
-      Script: {instanceID: 14808}
+      Script: {instanceID: 14616}
     - Class: 114
-      Script: {instanceID: 15038}
+      Script: {instanceID: 14808}
     - Class: 114
       Script: {instanceID: 15102}
     - Class: 114
@@ -654,11 +665,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15838}
     - Class: 114
-      Script: {instanceID: 16126}
+      Script: {instanceID: 16128}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 16192}
     - Class: 114
-      Script: {instanceID: 16478}
+      Script: {instanceID: 16480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -666,6 +677,8 @@ ScriptsOnlyBuild:
     - Class: 128
       Script: {instanceID: 0}
     - Class: 135
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
@@ -749,19 +762,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12726}
     - Class: 114
-      Script: {instanceID: 13108}
-    - Class: 114
       Script: {instanceID: 13596}
+    - Class: 114
+      Script: {instanceID: 13646}
     - Class: 114
       Script: {instanceID: 13786}
     - Class: 114
       Script: {instanceID: 13994}
     - Class: 114
+      Script: {instanceID: 14616}
+    - Class: 114
       Script: {instanceID: 14698}
     - Class: 114
       Script: {instanceID: 14808}
-    - Class: 114
-      Script: {instanceID: 15038}
     - Class: 114
       Script: {instanceID: 15130}
     - Class: 114
@@ -775,14 +788,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15814}
     - Class: 114
-      Script: {instanceID: 16190}
+      Script: {instanceID: 16192}
     - Class: 114
-      Script: {instanceID: 16334}
+      Script: {instanceID: 16336}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -949,7 +964,7 @@ ScriptsOnlyBuild:
     className: OculusSpatializerUnity
   - hash:
       serializedVersion: 2
-      Hash: 151c2c5f50e3fc79df108d5d6153ea6b
+      Hash: b2a9b21d1b2096c6869c70874c9f251a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: KitchenMissionController
@@ -2873,6 +2888,12 @@ ScriptsOnlyBuild:
     assemblyName: Oculus.Platform.dll
     namespaceName: Oculus.Platform.Samples.VrVoiceChat
     className: VREyeRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: de052773608905d5efbbee4f052eec0c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Waves
   - hash:
       serializedVersion: 2
       Hash: 818ef5e627a2b5d5813d21f133f2b16d
