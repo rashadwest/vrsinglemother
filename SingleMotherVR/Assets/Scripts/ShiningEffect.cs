@@ -34,4 +34,9 @@ public class ShiningEffect : MonoBehaviour
         isEnded = true;
         Renderer.materials[MaterialID].SetFloat(MaterialOptionName, 0);
     }
+
+    public void StartShining()
+    {
+        isEnded = false;
+    }
 }

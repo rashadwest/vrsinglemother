@@ -87,7 +87,7 @@ public class YardWorkController : MonoBehaviour
         LabelText.text = "";
         LabelText.color = Color.white;
         yield return new WaitForSeconds(1);
-        LabelText.text = "Take the broom";
+        LabelText.text = "Take the rake";
     }
 
     IEnumerator EndMission() {
