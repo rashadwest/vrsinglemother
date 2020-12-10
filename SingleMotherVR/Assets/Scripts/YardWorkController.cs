@@ -17,22 +17,38 @@ public class YardWorkController : MonoBehaviour
     public Button YesBnt;
     public Button NoBnt;
 
+    public Transform AvatarRightHand; 
+
     [Header("Label Part")]
     public GameObject LabelCanvas;
     public Text LabelText;
+
+    [Header("Mission Elements")]
+    public GameObject RakeOnScene;
+    public GameObject RakePrefab;
+    private GameObject Rake;
+    public GameObject RakeCanvas;
+    public Button RakeTakeBtn;
 
     private void Awake()
     {
         MissonEndTrigger.Callback += EndMissions;
         YesBnt.onClick.AddListener(ClickedYes);
         NoBnt.onClick.AddListener(ClickedNo);
+        RakeTakeBtn.onClick.AddListener(TakingRake);
     }
 
     private void Start()
     {
+        Clear();
         Target = Camera.main.transform;
         LabelCanvas.SetActive(false);
         MissonEndTrigger.gameObject.SetActive(false);
+    }
+
+    void Clear() {
+        RakeCanvas.SetActive(false);
+        RakeOnScene.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,7 +78,7 @@ public class YardWorkController : MonoBehaviour
     void ClickedYes() {
         CharacterController.enabled = false;
         QuestionCanvas.SetActive(false);
-        StartCoroutine(PlaySubtitles());
+        Starting();
     }
 
     void ClickedNo()
@@ -72,6 +88,17 @@ public class YardWorkController : MonoBehaviour
         CharacterController.enabled = true;
         QuestionCanvas.SetActive(false);
         StartCoroutine(EndMission());
+    }
+
+    void Starting() {
+        StartCoroutine(PlaySubtitles());
+        RakeCanvas.SetActive(true);
+    }
+
+    void TakingRake()
+    {
+        RakeOnScene.SetActive(false);
+        Rake = Instantiate(RakePrefab, AvatarRightHand);
     }
 
     void EndMissions() {
