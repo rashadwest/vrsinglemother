@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class YardWorkController : MonoBehaviour
 {
     [Header("General")]
+    private bool IsStared = false;
     private Transform Target;
+    public LawnMowerMissionController LawnMowerMission;
     public GameObject MissionParticle;
     public GameObject QuestionCanvas;
     public YardWorkEndTrigger MissonEndTrigger;
@@ -24,6 +26,7 @@ public class YardWorkController : MonoBehaviour
     public Text LabelText;
 
     [Header("Mission Elements")]
+    public GameObject LawnMayer;
     public GameObject RakeOnScene;
     public GameObject RakePrefab;
     private GameObject Rake;
@@ -40,15 +43,32 @@ public class YardWorkController : MonoBehaviour
 
     private void Start()
     {
+        /* ----Old Mission------
         Clear();
         Target = Camera.main.transform;
         LabelCanvas.SetActive(false);
         MissonEndTrigger.gameObject.SetActive(false);
+        */
+
+        // ----New Mission------
+        Clear();
+        Target = Camera.main.transform;
+        MissonEndTrigger.gameObject.SetActive(false);
+        IsStared = false;
+
     }
 
-    void Clear() {
+    void Clear()
+    {
+        /* ----Old Mission------
         RakeCanvas.SetActive(false);
         RakeOnScene.SetActive(true);
+        */
+
+        IsStared = false;
+        LawnMayer.SetActive(true);
+        MissionParticle.SetActive(true);
+        MissonEndTrigger.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,15 +76,27 @@ public class YardWorkController : MonoBehaviour
         if (other.transform != Target)
             return;
 
-        StartMission();
+        if (!IsStared)
+        {
+            StartNewMission();
+            IsStared = true;
+        }
     }
 
-    void StartMission() {
+    void StartOldMission() {
         MissonStartTrigger.enabled = false;
         MissionParticle.SetActive(false);
         MissonEndTrigger.gameObject.SetActive(true);
 
         StartCoroutine(ShowQuestion());
+    }
+
+    void StartNewMission()
+    {
+        LawnMayer.SetActive(false);
+        MissionParticle.SetActive(false);
+        StartCoroutine(LawnMowerMission.Starting());
+        MissonEndTrigger.gameObject.SetActive(true);
     }
 
     IEnumerator ShowQuestion()
@@ -99,6 +131,7 @@ public class YardWorkController : MonoBehaviour
     {
         RakeOnScene.SetActive(false);
         Rake = Instantiate(RakePrefab, AvatarRightHand);
+        LabelText.text = "Clean the grass";
     }
 
     void EndMissions() {
@@ -118,12 +151,20 @@ public class YardWorkController : MonoBehaviour
     }
 
     IEnumerator EndMission() {
+        /* ----Old Mission------
         LabelText.text = "Mission End";
         LabelText.color = Color.red;
         StartCoroutine(HideCanvas());
         yield return new WaitForSeconds(2);
         MissionParticle.SetActive(true);
         MissonStartTrigger.enabled = true;
+        */
+
+        yield return new WaitForSeconds(0);
+        MissionParticle.SetActive(true);
+        MissonStartTrigger.enabled = true;
+        LawnMowerMission.Ending();
+        Clear();
     }
 
     IEnumerator HideCanvas()

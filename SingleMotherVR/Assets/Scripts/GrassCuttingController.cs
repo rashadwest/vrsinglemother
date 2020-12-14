@@ -21,6 +21,7 @@ public class GrassCuttingController : MonoBehaviour
     {
         if (Enabled)
         {
+            Target = GameObject.FindGameObjectWithTag("LawnMower").transform;
             if (other.transform != Target)
                 return;
 

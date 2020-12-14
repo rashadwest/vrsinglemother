@@ -16,18 +16,36 @@ public class GrassController : MonoBehaviour
 
     public void Enable()
     {
+        Grasses.Clear();
+        foreach (Transform item in transform)
+        {
+            Grasses.Add(item.gameObject);
+        }
+
         foreach (var item in Grasses)
         {
-            item.GetComponent<GrassCuttingController>().enabled = true;
-            item.GetComponent<GrassCuttingController>().Enabled = true;
+            if (item != null)
+            {
+                item.GetComponent<GrassCuttingController>().enabled = true;
+                item.GetComponent<GrassCuttingController>().Enabled = true;
+            }
         }
     }
 
     public void Disable()
     {
+        Grasses.Clear();
+        foreach (Transform item in transform)
+        {
+            Grasses.Add(item.gameObject);
+        }
+
         foreach (var item in Grasses)
         {
-            item.GetComponent<GrassCuttingController>().enabled = false;
+            if (item != null)
+            {
+                item.GetComponent<GrassCuttingController>().enabled = false;
+            }
         }
     }
 }
