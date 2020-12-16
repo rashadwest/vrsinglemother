@@ -8,6 +8,7 @@ public class RoomMissionController : MonoBehaviour
     private bool IsStarted = false;
 
     public GameObject MissionParticle;
+    public GameObject MissionEndParticle;
     public CharacterController AvatarController;
     public Transform Avatar;
     public OVRScreenFade ScreenFade;
@@ -38,6 +39,7 @@ public class RoomMissionController : MonoBehaviour
     IEnumerator StartMission() {
         IsStarted = true;
         MissionParticle.SetActive(false);
+        MissionEndParticle.SetActive(true);
         AvatarController.enabled = false;
         ScreenFade.FadeOut();
         yield return new WaitForSeconds(2.5f);
@@ -52,5 +54,6 @@ public class RoomMissionController : MonoBehaviour
     void EndMission() {
         IsStarted = false;
         MissionParticle.SetActive(true);
+        MissionEndParticle.SetActive(false);
     }
 }
