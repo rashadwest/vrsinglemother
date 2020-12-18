@@ -63,12 +63,14 @@ public class MainEngine : MonoBehaviour
         }
     }
 
-    public void SittingSofa()
+    public IEnumerator SittingSofa()
     {
         Avatar.localPosition = SitPosition;
         Avatar.LookAt(TV);
         AvatarController.enabled = false;
         AvatarChild.localPosition = new Vector3(0,0.13f,0);
+        yield return new WaitForSeconds(0.2f);
+        AvatarController.enabled = true;
 
         //EyeCanvas.gameObject.SetActive(true);
     }
