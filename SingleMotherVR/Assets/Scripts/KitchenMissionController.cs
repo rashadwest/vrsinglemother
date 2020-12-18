@@ -50,8 +50,8 @@ public class KitchenMissionController : MonoBehaviour
     IEnumerator StartMission()
     {
         Particle.SetActive(false);
-        AvatarController.enabled = false;
-        Avatar.localPosition = StandingPos;
+        /*AvatarController.enabled = false;
+        Avatar.localPosition = StandingPos;*/
 
         yield return new WaitForSeconds(3);
         RingingAudio.enabled = true;
@@ -126,8 +126,8 @@ public class KitchenMissionController : MonoBehaviour
     {
         Particle.SetActive(true);
         ExitCanvas.SetActive(false);
-        AvatarController.enabled = false;
-        Avatar.localPosition = new Vector3(2.255588f, 0.05799985f, 4.734963f);
+        /*AvatarController.enabled = false;
+        Avatar.localPosition = new Vector3(2.255588f, 0.05799985f, 4.734963f);*/
         TelephoneAnim.enabled = true;
         RingingAudio.enabled = false;
         Phone.SetActive(true);
