@@ -57,7 +57,7 @@ public class LawnMowerMissionController : MonoBehaviour
     }
 
     void StartMission() {
-        AvatarController.enabled = false;
+       // AvatarController.enabled = false;
         //Avatar.localPosition = StartingPosition;
         LawnMawer = Instantiate(LawnMawerPrefab, LawnMawerParent);
         StartCoroutine(PlayAudio());
@@ -78,7 +78,7 @@ public class LawnMowerMissionController : MonoBehaviour
         LawnMower1.Play();
         yield return new WaitForSeconds(LawnMower1.clip.length - 0.5f);
         LawnMawer.transform.GetChild(0).GetComponent<Animator>().Play("LawnMower");
-        AvatarController.enabled = true;
+        //AvatarController.enabled = true;
         LawnMower1.enabled = false;
         LawnMower2.enabled = true;
         LawnMower2.Play();
