@@ -7,6 +7,8 @@ public class RoomMissionController : MonoBehaviour
     private Transform Target;
     private bool IsStarted = false;
 
+    public GameObject OpenedWardrobe;
+    public GameObject ClosedWardrobe;
     public GameObject MissionParticle;
     public GameObject MissionEndParticle;
     public CharacterController AvatarController;
@@ -19,6 +21,8 @@ public class RoomMissionController : MonoBehaviour
     {
         Target = Camera.main.transform;
         IsStarted = false;
+        OpenedWardrobe.SetActive(false);
+        ClosedWardrobe.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +42,8 @@ public class RoomMissionController : MonoBehaviour
 
     IEnumerator StartMission() {
         IsStarted = true;
+        OpenedWardrobe.SetActive(true);
+        ClosedWardrobe.SetActive(false);
         MissionParticle.SetActive(false);
         MissionEndParticle.SetActive(true);
         AvatarController.enabled = false;
@@ -51,8 +57,11 @@ public class RoomMissionController : MonoBehaviour
         }));
     }
 
-    void EndMission() {
+    void EndMission()
+    {
         IsStarted = false;
+        OpenedWardrobe.SetActive(false);
+        ClosedWardrobe.SetActive(true);
         MissionParticle.SetActive(true);
         MissionEndParticle.SetActive(false);
     }
