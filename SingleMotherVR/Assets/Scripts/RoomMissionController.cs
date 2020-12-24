@@ -16,6 +16,7 @@ public class RoomMissionController : MonoBehaviour
     public OVRScreenFade ScreenFade;
     public Vector3 StartingPos;
     public Vector3 StartingRot;
+    public AudioSource CryingBabyAudio;
         
     void Start()
     {
@@ -51,6 +52,7 @@ public class RoomMissionController : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         Avatar.localPosition = StartingPos;
         Avatar.localRotation = Quaternion.Euler(StartingRot);
+        CryingBabyAudio.volume = 0;
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(ScreenFade.Fade(1, 0, value => {
             AvatarController.enabled = true;
@@ -60,6 +62,7 @@ public class RoomMissionController : MonoBehaviour
     void EndMission()
     {
         IsStarted = false;
+        CryingBabyAudio.volume = 0.071f;
         OpenedWardrobe.SetActive(false);
         ClosedWardrobe.SetActive(true);
         MissionParticle.SetActive(true);
