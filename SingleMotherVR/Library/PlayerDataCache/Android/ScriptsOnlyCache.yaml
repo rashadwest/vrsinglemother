@@ -1695,7 +1695,7 @@ ScriptsOnlyBuild:
     className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
-      Hash: 70d1868ba4862676126f1e7e7665da06
+      Hash: dbc4931226514a4e3f734d9923184f98
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SofaSittingEvent
@@ -2925,7 +2925,7 @@ ScriptsOnlyBuild:
     className: VREyeRaycaster
   - hash:
       serializedVersion: 2
-      Hash: fa6c9a1a8fb73d3ef9bdaaf98b39a564
+      Hash: 450c927be4b65ae5d80f2a00bfa4b77c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RoomMissionController
