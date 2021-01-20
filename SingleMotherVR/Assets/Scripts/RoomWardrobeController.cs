@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class RoomWardrobeController : MonoBehaviour
 {
+    public GameObject Hat;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.name == "Hat")
         {
-            //Hat
+            Hat.SetActive(true);
+            other.gameObject.SetActive(false);
         }
         else if (other.name == "Backpack")
         {
