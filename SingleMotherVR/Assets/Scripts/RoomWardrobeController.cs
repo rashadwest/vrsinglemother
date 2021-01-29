@@ -5,6 +5,9 @@ using UnityEngine;
 public class RoomWardrobeController : MonoBehaviour
 {
     public GameObject Hat;
+    public GameObject Shoes;
+    public GameObject Backpack;
+    public GameObject Shirt;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -15,15 +18,18 @@ public class RoomWardrobeController : MonoBehaviour
         }
         else if (other.name == "Backpack")
         {
-            //Backpack
+            Backpack.SetActive(true);
+            other.gameObject.SetActive(false);
         }
         else if (other.name == "Shirt")
         {
-            //Shirt
+            Shirt.SetActive(true);
+            other.gameObject.SetActive(false);
         }
         else if (other.name == "Shoes")
         {
-            //Shoes
+            Shoes.SetActive(true);
+            other.gameObject.SetActive(false);
         }
     }
 }
