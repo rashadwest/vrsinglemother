@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomMissionController : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class RoomMissionController : MonoBehaviour
     public Vector3 StartingPos;
     public Vector3 StartingRot;
     public AudioSource CryingBabyAudio;
+
+    public GameObject Canvas;
+    public Text CanvasText;
         
     void Start()
     {
@@ -67,5 +71,19 @@ public class RoomMissionController : MonoBehaviour
         ClosedWardrobe.SetActive(true);
         MissionParticle.SetActive(true);
         MissionEndParticle.SetActive(false);
+    }
+
+    public void GetSignal() {
+        OpenedWardrobe.SetActive(false);
+        ClosedWardrobe.SetActive(true);
+        StartCoroutine(ShowSuccessText());
+    }
+
+    IEnumerator ShowSuccessText() {
+        Canvas.SetActive(true);
+        CanvasText.text = "Nice. You can leave the room";
+        yield return new WaitForSeconds(3);
+        Canvas.SetActive(false);
+        CanvasText.text = "";
     }
 }
