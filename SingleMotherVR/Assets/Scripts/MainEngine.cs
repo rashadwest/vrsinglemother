@@ -61,6 +61,10 @@ public class MainEngine : MonoBehaviour
             yield return new WaitForSeconds(4.3f);
             EnjoingAudio.enabled = false;
         }
+        else
+        {
+
+        }
     }
 
     public IEnumerator SittingSofa()
