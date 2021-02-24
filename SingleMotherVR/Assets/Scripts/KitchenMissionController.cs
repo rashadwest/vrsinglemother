@@ -20,6 +20,7 @@ public class KitchenMissionController : MonoBehaviour
     public GameObject Phone;
     public Button StartCallBtn;
     public Button EndCallBtn;
+    public Transform CanvasContainer;
     public GameObject LabelCanvas;
     public Text LabelText;
     public GameObject ExitCanvas;
@@ -82,7 +83,9 @@ public class KitchenMissionController : MonoBehaviour
         LabelCanvas.SetActive(false);
     }
 
-    IEnumerator PlaySubtitles() {
+    IEnumerator PlaySubtitles()
+    {
+        CanvasContainer.localRotation = Quaternion.Euler(0, Camera.main.transform.localEulerAngles.y, 0);
         LabelCanvas.SetActive(true);
         LabelCanvas.GetComponent<Animator>().Play("CanvasGroupFadeIn");
 

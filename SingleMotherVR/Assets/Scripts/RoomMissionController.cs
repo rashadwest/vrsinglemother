@@ -19,6 +19,7 @@ public class RoomMissionController : MonoBehaviour
     public Vector3 StartingRot;
     public AudioSource CryingBabyAudio;
 
+    public Transform CanvasContainer;
     public GameObject Canvas;
     public Text CanvasText;
         
@@ -81,6 +82,7 @@ public class RoomMissionController : MonoBehaviour
 
     IEnumerator ShowSuccessText() {
         Canvas.SetActive(true);
+        CanvasContainer.localRotation = Quaternion.Euler(0, Camera.main.transform.localEulerAngles.y, 0);
         CanvasText.text = "Nice. You can leave the room";
         yield return new WaitForSeconds(3);
         Canvas.SetActive(false);
