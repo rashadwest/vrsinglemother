@@ -16,6 +16,12 @@ public class QuestionBlock : MonoBehaviour
 
     private Transform Target;
 
+    private void Awake()
+    {
+        YesBtn.onClick.AddListener(ClickedYes);
+        NoBtn.onClick.AddListener(ClickedNo);
+    }
+
     private void Start()
     {
         Target = Camera.main.transform;
@@ -35,12 +41,21 @@ public class QuestionBlock : MonoBehaviour
         Canvas.SetActive(true);
         BtnPart.SetActive(true);
         YesBtnText.text = "Yes. Mow the lawn";
-        NoBtnText.text = "No. Spend money fo it";
+        NoBtnText.text = "No. Spend money for it";
         StartCoroutine(WriteText());
     }
 
     IEnumerator WriteText() {
-        yield return new WaitForSeconds(1);
-        TextBox.text = "Hello";
+        yield return new WaitForSeconds(0.5f);
+        TextBox.text = "you need to clear the lawn";
+    }
+
+    void ClickedYes() {
+
+    }
+
+    void ClickedNo()
+    {
+
     }
 }

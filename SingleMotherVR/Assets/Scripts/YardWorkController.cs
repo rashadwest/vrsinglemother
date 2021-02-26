@@ -79,7 +79,6 @@ public class YardWorkController : MonoBehaviour
         if (!IsStared)
         {
             StartNewMission();
-            IsStared = true;
         }
     }
 
@@ -93,6 +92,7 @@ public class YardWorkController : MonoBehaviour
 
     void StartNewMission()
     {
+        IsStared = true;
         LawnMayer.SetActive(false);
         MissionParticle.SetActive(false);
         StartCoroutine(LawnMowerMission.Starting());
