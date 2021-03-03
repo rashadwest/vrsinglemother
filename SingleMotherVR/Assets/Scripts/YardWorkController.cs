@@ -82,15 +82,7 @@ public class YardWorkController : MonoBehaviour
         }
     }
 
-    void StartOldMission() {
-        MissonStartTrigger.enabled = false;
-        MissionParticle.SetActive(false);
-        MissonEndTrigger.gameObject.SetActive(true);
-
-        StartCoroutine(ShowQuestion());
-    }
-
-    void StartNewMission()
+    public void StartNewMission()
     {
         IsStared = true;
         LawnMayer.SetActive(false);

@@ -38,6 +38,11 @@ public class MainEngine : MonoBehaviour
 
     IEnumerator Start()
     {
+        if (PlayerPrefs.GetString("BankAccaunt") == "")
+        {
+            PlayerPrefs.SetString("BankAccaunt", "350");
+        }
+
         EyeCanvas.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
 
         TimeController.SetTime();
