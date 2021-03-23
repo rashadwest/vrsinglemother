@@ -55,7 +55,6 @@ public class YardWorkController : MonoBehaviour
         Target = Camera.main.transform;
         MissonEndTrigger.gameObject.SetActive(false);
         IsStared = false;
-
     }
 
     void Clear()

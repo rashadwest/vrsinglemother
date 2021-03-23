@@ -8,6 +8,8 @@ public class BankAccaunt : MonoBehaviour
     public Button CloseBtn;
     public Text AmmountText;
 
+    public GameObject BankAccauntCanvas;
+
     private void Awake()
     {
         CloseBtn.onClick.AddListener(Close);
@@ -21,5 +23,7 @@ public class BankAccaunt : MonoBehaviour
 
     void Close() {
         gameObject.SetActive(false);
+
+        BankAccauntCanvas.SetActive(true);
     }
 }
