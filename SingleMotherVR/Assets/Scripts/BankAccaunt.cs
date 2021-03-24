@@ -7,6 +7,7 @@ public class BankAccaunt : MonoBehaviour
 {
     public Button CloseBtn;
     public Text AmmountText;
+    public Text SeccondAmmountText;
 
     public GameObject BankAccauntCanvas;
 

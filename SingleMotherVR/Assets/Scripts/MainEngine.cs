@@ -11,6 +11,7 @@ public class MainEngine : MonoBehaviour
     public OVRScreenFade ScreenFade;
     public PostProcessingEffects PostProcessingEffects;
     public DayNightSystemController TimeController;
+    public Text BankAmmountText;
 
     private Vector3 AvatarPos;
 
@@ -121,5 +122,10 @@ public class MainEngine : MonoBehaviour
         StartCoroutine(ScreenFade.Fade(0, 1, value => {
             SceneManager.LoadScene("Jail");
         }));
+    }
+
+    private void Update()
+    {
+        BankAmmountText.text = "$" + PlayerPrefs.GetString("BankAccaunt");
     }
 }

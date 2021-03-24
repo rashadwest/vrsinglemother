@@ -21,7 +21,6 @@ public class LawnMowerMissionController : MonoBehaviour
     private Transform Cam;
     private GameObject LawnMawer;
 
-
     private IEnumerator Start()
     {
         Cam = Camera.main.transform;
