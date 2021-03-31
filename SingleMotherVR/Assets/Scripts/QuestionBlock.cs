@@ -11,6 +11,7 @@ public class QuestionBlock : MonoBehaviour
     public GameObject Canvas;
     public GameObject BtnPart;
     public Text TextBox;
+    public AudioSource FirstQuestionAudio;
 
     public Button YesBtn;
     public Text YesBtnText;
@@ -49,23 +50,33 @@ public class QuestionBlock : MonoBehaviour
         CanvasContainer.localRotation = Quaternion.Euler(0, Camera.main.transform.localEulerAngles.y, 0);
         Canvas.SetActive(true);
         BtnPart.SetActive(true);
-        YesBtnText.text = "Yes. Mow the lawn";
-        NoBtnText.text = "No. Spend money for it";
+        YesBtnText.text = "Yes. Spend money";
+        NoBtnText.text = "No. Fix yourself";
         StartCoroutine(WriteText());
+        FirstQuestionAudio.enabled = true;
     }
 
     IEnumerator WriteText() {
         yield return new WaitForSeconds(0.5f);
-        TextBox.text = "you need to clear the lawn";
+        TextBox.text = "You need to clear the lawn";
+        yield return new WaitForSeconds(3.5f);
+        TextBox.text = "Spend money for fix it?";
     }
 
     void ClickedYes() {
-        AvatarController.enabled = false;
+       /* AvatarController.enabled = false;
         Avatar.localPosition = new Vector3(2.1f, -0.267f, 1.91f);
         YardWorkController.StartNewMission();
         AvatarController.enabled = true;
         Canvas.SetActive(false);
-        BtnPart.SetActive(false);
+        BtnPart.SetActive(false);*/
+
+
+        TextBox.text = "You lose 45$";
+        float money = float.Parse(PlayerPrefs.GetString("BankAccaunt"));
+        float newMoney = money - 45f;
+        PlayerPrefs.SetString("BankAccaunt", newMoney.ToString());
+        StartCoroutine(CloseBlock());
     }
 
     void ClickedNo()
