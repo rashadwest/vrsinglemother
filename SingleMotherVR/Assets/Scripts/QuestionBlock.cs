@@ -77,14 +77,15 @@ public class QuestionBlock : MonoBehaviour
         float newMoney = money - 45f;
         PlayerPrefs.SetString("BankAccaunt", newMoney.ToString());
         StartCoroutine(CloseBlock());
+        YardWorkController.Clear();
     }
 
     void ClickedNo()
     {
-        TextBox.text = "You lose 45$";
+        /*TextBox.text = "You lose 45$";
         float money = float.Parse(PlayerPrefs.GetString("BankAccaunt"));
         float newMoney = money - 45f;
-        PlayerPrefs.SetString("BankAccaunt", newMoney.ToString());
+        PlayerPrefs.SetString("BankAccaunt", newMoney.ToString());*/
         StartCoroutine(CloseBlock());
     }
 

@@ -43,27 +43,14 @@ public class YardWorkController : MonoBehaviour
 
     private void Start()
     {
-        /* ----Old Mission------
-        Clear();
-        Target = Camera.main.transform;
-        LabelCanvas.SetActive(false);
-        MissonEndTrigger.gameObject.SetActive(false);
-        */
-
-        // ----New Mission------
-        Clear();
+        //Clear();
         Target = Camera.main.transform;
         MissonEndTrigger.gameObject.SetActive(false);
         IsStared = false;
     }
 
-    void Clear()
+    public void Clear()
     {
-        /* ----Old Mission------
-        RakeCanvas.SetActive(false);
-        RakeOnScene.SetActive(true);
-        */
-
         IsStared = false;
         LawnMayer.SetActive(true);
         MissionParticle.SetActive(true);
