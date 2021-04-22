@@ -40,6 +40,8 @@ public class Breathing : MonoBehaviour
         Material.mainTexture = InFrost;
         BreathingSoundEffect.volume = 0.1f;
         ChildCryingSoundEffect.Play();
+
+
     }
 
     private void OnTriggerExit(Collider other)
