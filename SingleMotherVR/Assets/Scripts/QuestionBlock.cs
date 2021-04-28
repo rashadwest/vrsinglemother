@@ -64,14 +64,6 @@ public class QuestionBlock : MonoBehaviour
     }
 
     void ClickedYes() {
-       /* AvatarController.enabled = false;
-        Avatar.localPosition = new Vector3(2.1f, -0.267f, 1.91f);
-        YardWorkController.StartNewMission();
-        AvatarController.enabled = true;
-        Canvas.SetActive(false);
-        BtnPart.SetActive(false);*/
-
-
         TextBox.text = "You lose 45$";
         float money = float.Parse(PlayerPrefs.GetString("BankAccaunt"));
         float newMoney = money - 45f;
@@ -82,10 +74,6 @@ public class QuestionBlock : MonoBehaviour
 
     void ClickedNo()
     {
-        /*TextBox.text = "You lose 45$";
-        float money = float.Parse(PlayerPrefs.GetString("BankAccaunt"));
-        float newMoney = money - 45f;
-        PlayerPrefs.SetString("BankAccaunt", newMoney.ToString());*/
         StartCoroutine(CloseBlock());
     }
 

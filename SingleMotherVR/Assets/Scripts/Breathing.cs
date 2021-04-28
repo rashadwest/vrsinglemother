@@ -6,6 +6,8 @@ public class Breathing : MonoBehaviour
 {
     public ParticleSystem FrostEffect;
 
+    public InsideHouseQuestion InsideHouseQuestion;
+
     public AudioSource BreathingSoundEffect;
     public AudioSource ChildCryingSoundEffect;
 
@@ -15,6 +17,7 @@ public class Breathing : MonoBehaviour
     public Texture InFrost;
 
     private Transform Target;
+    private bool isShowedQuestion = false;
 
     private void Start()
     {
