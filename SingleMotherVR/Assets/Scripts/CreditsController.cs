@@ -43,7 +43,7 @@ public class CreditsController : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         leftPanel.gameObject.SetActive(true);
         StartCoroutine(leftPanel.Show());
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(4.5f);
         RightPanel.gameObject.SetActive(true);
         StartCoroutine(RightPanel.Show());
     }

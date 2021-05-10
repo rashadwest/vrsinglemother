@@ -89,6 +89,7 @@
     <Compile Include="Assets\AVProVideo\Scripts\Components\DisplayUGUI.cs" />
     <Compile Include="Assets\AVProVideo\Demos\Scripts\Scriptlets\NativeMediaOpen.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\Locomotion\Scripts\TeleportOrientationHandler.cs" />
+    <Compile Include="Assets\Scripts\InsideHouseQuestion.cs" />
     <Compile Include="Assets\Scripts\YardWorkEndTrigger.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Scripts\TrainButtonVisualController.cs" />
     <Compile Include="Assets\AVProVideo\Scripts\Components\AudioChannelMixer.cs" />
@@ -335,7 +336,6 @@
     <Compile Include="Assets\CurvedUI\Scripts\Experimental\CurvedUITMPSubmesh.cs" />
     <Compile Include="Assets\Scripts\StarterPackController.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ButtonController.cs" />
-    <Compile Include="Assets\Scripts\InsideHouseQuestion.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
