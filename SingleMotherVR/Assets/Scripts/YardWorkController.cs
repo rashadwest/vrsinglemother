@@ -54,7 +54,7 @@ public class YardWorkController : MonoBehaviour
         IsStared = false;
         LawnMayer.SetActive(true);
         MissionParticle.SetActive(true);
-        MissonEndTrigger.gameObject.SetActive(false);
+        //MissonEndTrigger.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

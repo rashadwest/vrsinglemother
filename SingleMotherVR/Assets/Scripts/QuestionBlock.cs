@@ -75,6 +75,7 @@ public class QuestionBlock : MonoBehaviour
     void ClickedNo()
     {
         StartCoroutine(CloseBlock());
+        YardWorkController.Clear();
     }
 
     IEnumerator CloseBlock()
